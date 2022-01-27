@@ -1,0 +1,89 @@
+<div class="hidden bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
+
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">✏️</span>Наши авторы</div>
+  <div>
+    <?php 
+    $authors = get_users();
+    foreach ($authors as $author): ?>
+      <div class="flex items-center mb-6">
+        <div class="w-1/6 mr-2">
+          <?php 
+            $avatar_url = carbon_get_user_meta($author->ID, 'crb_user_ava'); 
+          ?>
+          <?php if ($avatar_url): ?>
+            <img src="<?php echo $avatar_url; ?>" alt="" class="w-12 h-12 rounded-full">
+          <?php else: ?>
+            <?php 
+              $avatar = get_avatar(
+                $author->ID, '', '', '',
+                array( 'class' => array( 'w-12', 'h-12', 'rounded-full' ))
+              );
+            ?>
+            <?php if ($avatar): ?>
+              <?php echo $avatar; ?>
+            <?php else: ?>
+              <img src="<?php bloginfo('template_part'); ?>/img/user.svg" width="35px">
+            <?php endif; ?>
+          <?php endif; ?>
+        </div>
+        <div class="w-5/6">
+          <div class="text-gray-800 dark:text-gray-200 font-semibold"><?php echo $author->display_name; ?></div>
+          <div class="text-gray-800 dark:text-gray-200 font-light opacity-75">Публикаций: <?php echo count_user_posts($author->ID); ?></div>
+        </div>
+      </div>
+      
+       <!-- echo $user->ID;
+       echo $user->display_name;
+       the_author_image($user->ID);
+       echo $user->description; -->
+      
+    <?php endforeach; ?>
+  </div>
+</div>
+
+<?php get_template_part('template-parts/components/telegram-css'); ?>  
+
+<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Наш рейтинг</div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🏆</span>Лучший хостинг для сайта</div>
+  <div>
+    <?php
+    $number_hosting = 0;
+    $best_hosters = carbon_get_theme_option('crb_best_hosters'); 
+    foreach ($best_hosters as $best_hoster): 
+    $number_hosting++;
+    ?>
+    <!-- item -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4"><?php echo $number_hosting; ?></div>
+        <div class="text-gray-800 dark:text-gray-200"><a href="<?php echo $best_hoster['crb_best_hoster_link']; ?>" target="_blank"><?php echo $best_hoster['crb_best_hoster_name']; ?></a></div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75"><?php echo $best_hoster['crb_best_hoster_rating']; ?></div>
+    </div>
+    <!-- end item -->
+    <?php endforeach; ?>
+  </div>
+</div>
+
+<!-- Курсы -->
+<?php get_template_part('template-parts/components/sidebar-courses'); ?>
+<!-- END Курсы -->
+
+<!-- Опрос -->
+<?php get_template_part('template-parts/components/sidebar-vote'); ?>
+<!-- END Опрос -->
+
+<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Very Peri</div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🤔</span>Цвет 2022 года</div>
+  <div class="text-gray-800 dark:text-gray-200">
+    <div class="mb-2">Институт цвета Pantone объявил цвет 2022 года. Это сиреневый оттенок под названием 17-3938 Very Peri. </div>
+  </div>
+  <div class="aspect-square mb-2" style="background-color: #6667ab;"></div>
+
+  <div class="flex items-center justify-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center p-2 mb-2" data-q-css="1">
+    <div class="w-4 h-4 mr-2" style="background-color: #6667ab;"></div>
+    <div>#6667ab</div>
+  </div>
+</div>
