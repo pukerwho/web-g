@@ -54,7 +54,7 @@
     <div class="text-2xl uppercase font-bold text-gray-800">Patreon</div>
   </div>
   <div>
-    <a href="https://www.patreon.com/webgolovolomki" class="block border border-indigo-500 text-center px-4 py-2 rounded">Перейти на Patreon</a>
+    <a href="https://www.patreon.com/webgolovolomki" target="_blank" class="block border border-indigo-500 text-center px-4 py-2 rounded">Перейти на Patreon</a>
   </div>
 </div>
 
