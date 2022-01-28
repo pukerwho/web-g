@@ -149,7 +149,7 @@
           <!-- Рекомендуемые статьи -->
           <div class="mb-12">
             <div class="bg-gray-100 dark:bg-dark-md rounded-lg relative p-6">
-              <div class="absolute top-0 right-0 text-blue-800 translate-x-4 -translate-y-4">
+              <div class="absolute top-0 right-0 text-blue-800 lg:translate-x-4 -translate-y-4">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
