@@ -6,6 +6,9 @@
 				<span class="sketch-underline"><?php the_archive_title(); ?></span></h1>
 			<div class="flex flex-col lg:flex-row flex-wrap lg:-mx-4">
         <div class="w-full lg:w-2/3 lg:px-4">
+        	<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-6 py-2 lg:py-4 mb-6">
+        		<?php the_archive_description( '<div class="content">', '</div>' ); ?>
+        	</div>
         	<div class="flex flex-wrap flex-col mb-6">
         		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<!-- Post item -->
