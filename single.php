@@ -148,33 +148,31 @@
 
           <!-- Рекомендуемые статьи -->
           <div class="mb-12">
-            <?php if (carbon_get_the_post_meta('crb_similar_links')): ?>
-              <div class="bg-gray-100 rounded-lg relative p-6">
-                <div class="absolute top-0 right-0 text-blue-800 translate-x-4 -translate-y-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                </div>
-                <div class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Рекомендуем к прочтению</div>
+            <div class="bg-gray-100 dark:bg-dark-md rounded-lg relative p-6">
+              <div class="absolute top-0 right-0 text-blue-800 translate-x-4 -translate-y-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+              </div>
+              <div class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Рекомендуем к прочтению</div>
+
+              <?php if (carbon_get_the_post_meta('crb_similar_links')): ?>
+                <!-- Cами выбираем ссылки -->
                 <?php 
                 $similar_links = carbon_get_the_post_meta('crb_similar_links');
                 foreach ($similar_links as $link):
                 ?>
                   <?php $link_id = $link['id']; ?>
-                  <div class="flex text-xl text-blue-800 font-light mb-4 last-of-type:mb-0">
-                    <div class="w-4 min-w-[1rem] h-4 min-h-4 rounded-full bg-gray-400 mr-4 translate-y-2/4"></div>
+                  <div class="flex text-xl text-blue-800 dark:text-blue-400 font-light mb-4 last-of-type:mb-0">
+                    <div class="w-4 min-w-[1rem] h-4 min-h-4 rounded-full bg-gray-400 mr-4 translate-y-[0.4rem]"></div>
                     <a href="<?php echo get_the_permalink($link_id); ?>" class=""><?php echo get_the_title($link_id); ?></a>
                   </div>
                 <?php endforeach; ?>
-              </div>
-            <?php else: ?>
-              <div class="bg-gray-100 rounded-lg relative p-6">
-                <div class="absolute top-0 right-0 text-blue-800 translate-x-4 -translate-y-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                  </svg>
-                </div>
-                <div class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Рекомендуем к прочтению</div>
+                <!-- END Cами выбираем ссылки -->
+
+              <?php else: ?>
+
+                <!-- Автоматом вставляются ссылки -->
                 <?php 
                   $current_id = get_the_ID();
                   $other_query = new WP_Query( array( 
@@ -193,13 +191,14 @@
                     ),
                   ) );
                 if ($other_query->have_posts()) : while ($other_query->have_posts()) : $other_query->the_post(); ?>
-                  <div class="flex text-xl text-blue-800 font-light mb-4 last-of-type:mb-0">
-                    <div class="w-4 min-w-[1rem] h-4 min-h-4 rounded-full bg-gray-400 mr-4 translate-y-2/4"></div>
+                  <div class="flex text-xl text-blue-800 dark:text-blue-400 font-light mb-4 last-of-type:mb-0">
+                    <div class="w-4 min-w-[1rem] h-4 min-h-4 rounded-full bg-gray-400 dark:bg-yellow-100 mr-4 translate-y-[0.45rem]"></div>
                     <a href="<?php the_permalink(); ?>" class=""><?php the_title(); ?></a>
                   </div>
                 <?php endwhile; endif; wp_reset_postdata(); ?>
-              </div>
-            <?php endif; ?>
+                <!-- END Автоматом вставляются ссылки -->
+              <?php endif; ?>
+            </div>
           </div>
           <!-- Рекомендуемые статьи -->
 
