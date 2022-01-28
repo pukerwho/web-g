@@ -1293,6 +1293,10 @@ hr {
   width: 83.333333%;
 }
 
+.min-w-\[1rem\] {
+  min-width: 1rem;
+}
+
 .translate-y-10 {
   --tw-translate-y: 2.5rem;
   transform: var(--tw-transform);
@@ -1300,6 +1304,41 @@ hr {
 
 .translate-x-6 {
   --tw-translate-x: 1.5rem;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-2\/4 {
+  --tw-translate-y: -50%;
+  transform: var(--tw-transform);
+}
+
+.translate-y-2\/4 {
+  --tw-translate-y: 50%;
+  transform: var(--tw-transform);
+}
+
+.translate-x-2\/4 {
+  --tw-translate-x: 50%;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
+  transform: var(--tw-transform);
+}
+
+.-translate-y-4 {
+  --tw-translate-y: -1rem;
+  transform: var(--tw-transform);
+}
+
+.translate-x-4 {
+  --tw-translate-x: 1rem;
   transform: var(--tw-transform);
 }
 
@@ -1475,6 +1514,11 @@ hr {
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
 }
 
+.bg-gray-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1516,6 +1560,10 @@ hr {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-2 {
@@ -1752,6 +1800,16 @@ hr {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.text-blue-800 {
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
 .opacity-75 {
   opacity: 0.75;
 }
@@ -1795,6 +1853,10 @@ hr {
   transition-duration: 150ms;
 }
 
+.last-of-type\:mb-0:last-of-type {
+  margin-bottom: 0px;
+}
+
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1825,20 +1887,8 @@ hr {
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
-.prose-a\:block :is(:where(a):not(:where([class~="not-prose"] *))) {
-  display: block;
-}
-
 .prose-a\:inline-block :is(:where(a):not(:where([class~="not-prose"] *))) {
   display: inline-block;
-}
-
-.prose-a\:flex :is(:where(a):not(:where([class~="not-prose"] *))) {
-  display: flex;
-}
-
-.prose-a\:justify-center :is(:where(a):not(:where([class~="not-prose"] *))) {
-  justify-content: center;
 }
 
 .prose-a\:rounded :is(:where(a):not(:where([class~="not-prose"] *))) {
