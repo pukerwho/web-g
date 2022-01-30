@@ -172,15 +172,19 @@ function tailwindwp_scripts() {
 add_action( 'wp_enqueue_scripts', 'tailwindwp_scripts' );
 
 //GUTENBERG
-function gutenberg_examples_01_register_block() {
-    register_block_type( 'web-g/example', [] );
-}
-add_action( 'init', 'gutenberg_examples_01_register_block' );
+add_action('init', function() {
+  wp_register_script('treba-gutenberg-filters-js', get_template_directory_uri() . '/gutenberg/js/gutenberg-filters.js', array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-edit-post', 'wp-components', 'wp-plugins', 'wp-data' ));
+
+  register_block_type( 'treba/code-block', [
+    'editor_script' => 'treba-gutenberg-filters-js',
+  ] );
+});
 
 function gutenberg_custom_scripts() {
-  wp_enqueue_script('awp-gutenberg-filters', get_template_directory_uri() . '/gutenberg/js/gutenberg-filters.js', array( 'wp-blocks', 'wp-element', 'wp-editor', 'wp-edit-post', 'wp-components', 'wp-plugins', 'wp-data' ));
+  
 }
 add_action('enqueue_block_editor_assets', 'gutenberg_custom_scripts');
+
 
 /**
  * Implement the Custom Header feature.

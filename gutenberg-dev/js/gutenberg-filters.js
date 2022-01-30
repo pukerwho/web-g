@@ -1,54 +1,66 @@
-// const { registerPlugin } = wp.plugins;
-// const { __ } = wp.i18n;
-// const { compose } = wp.compose;
-// const { withSelect, withDispatch } = wp.data;
-// const { PluginDocumentSettingPanel } = wp.editPost;
-// const { ToggleControl, TextControl, PanelRow } = wp.components;
+console.log('codeBlock');
+const { registerBlockType } = wp.blocks;
+const { RichText, InspectorControls } = wp.blockEditor;
+const { ToggleControl, PanelBody, PanelRow, CheckboxControl, SelectControl, ColorPicker } = wp.components;
  
-// const AWP_Custom_Plugin = ( { postType, postMeta, setPostMeta } ) => {
-//   if ( 'post' !== postType ) return null;  // Will only render component for post type 'post'
-  
-//   return(
-//     <PluginDocumentSettingPanel title={ __( 'My Custom Post meta', 'txtdomain') } icon="edit" initialOpen="true">
-//       <PanelRow>
-//         <ToggleControl
-//           label={ __( 'You can toggle me on or off', 'txtdomain' ) }
-//           onChange={ ( value ) => setPostMeta( { _my_custom_bool: value } ) }
-//           checked={ postMeta._my_custom_bool }
-//         />
-//       </PanelRow>
-//       <PanelRow>
-//         <TextControl
-//           label={ __( 'Write some text, if you like', 'txtdomain' ) }
-//           value={ postMeta._my_custom_text }
-//           onChange={ ( value ) => setPostMeta( { _my_custom_text: value } ) }
-//         />
-//       </PanelRow>
-//     </PluginDocumentSettingPanel>
-//   );
-// }
  
-// export default compose( [
-//   withSelect( ( select ) => {    
-//     return {
-//       postMeta: select( 'core/editor' ).getEditedPostAttribute( 'meta' ),
-//       postType: select( 'core/editor' ).getCurrentPostType(),
-//     };
-//   } ),
-//   withDispatch( ( dispatch ) => {
-//     return {
-//       setPostMeta( newMeta ) {
-//         dispatch( 'core/editor' ).editPost( { meta: newMeta } );
-//       }
-//     };
-//   } )
-// ] )( AWP_Custom_Plugin );
+registerBlockType('treba/code-block', {
+  title: 'Treba Code',
+  category: 'common',
+  attributes: {
+    trebaCode: {
+      type: 'string',
+      source: 'html',
+      selector: 'pre'
+    },
+    trebaCodeLang: {
+      type: 'string',
+      default: 'language-css'
+    },
+  },
+  edit: (props) => { 
+    const { attributes, setAttributes } = props;
+    return (
+      <div>
+        <InspectorControls>
+          <PanelBody
+            title="Настройки блока"
+            initialOpen={true}
+          >
+            <PanelRow>
+              <SelectControl
+                label="Язык программирования"
+                value={attributes.trebaCodeLang}
+                options={[
+                  {label: "html", value: 'language-html'},
+                  {label: "css", value: 'language-css'},
+                  {label: "javascript", value: 'language-javascript'},
+                ]}
+                onChange={(newval) => setAttributes({ trebaCodeLang: newval })}
+              />
+            </PanelRow>
+          </PanelBody>
+        </InspectorControls>
+        <RichText
+          tagName="code"
+          placeholder="Ваш код..."
+          value={attributes.trebaCode}
+          onChange={(newtext) => setAttributes({ trebaCode: newtext })}
+        />
+      </div>
+    );
+  },
+  save: (props) => { 
+    const { attributes } = props;
+    return (
+      <div>
+        <pre className={attributes.trebaCodeLang}>
+          <code>
+            {attributes.trebaCode}
+          </code>
+        </pre>
+      </div>
+    );
+  }
 
- 
-// registerPlugin( 'my-custom-postmeta-plugin', {
-//   render() {
-//     return(<AWP_Custom_Plugin />);
-//   }
-// } );
-
-
+});
