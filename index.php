@@ -188,7 +188,7 @@
 						</div>	
 						<?php endwhile; endif; wp_reset_postdata(); ?>
 						<div class="flex justify-center">
-							<div><a href="<?php echo get_post_type_archive_link('post'); ?>" class="inline-flex items-center text-center text-blue-500 bg-blue-100 dark:bg-slate-800 dark:text-sky-300 hover:bg-blue-500 hover:text-gray-200 dark:hover:bg-slate-700 dark:hover:text-sky-200 rounded px-5 py-2">
+							<div><a href="<?php echo get_page_url('templates/tpl_posts'); ?>" class="inline-flex items-center text-center text-blue-500 bg-blue-100 dark:bg-slate-800 dark:text-sky-300 hover:bg-blue-500 hover:text-gray-200 dark:hover:bg-slate-700 dark:hover:text-sky-200 rounded px-5 py-2">
 								<span class="mr-2">Все записи</span>
 								<span class="mt-[2px]">
 									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

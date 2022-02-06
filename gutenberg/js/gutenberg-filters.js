@@ -113,7 +113,7 @@ registerBlockType('treba/code-block', {
     trebaCode: {
       type: 'string',
       source: 'html',
-      selector: 'pre'
+      selector: 'code'
     },
     trebaCodeLang: {
       type: 'string',
@@ -145,7 +145,7 @@ registerBlockType('treba/code-block', {
         trebaCodeLang: newval
       })
     })))), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(RichText, {
-      tagName: "code",
+      tagName: "pre",
       placeholder: "\u0412\u0430\u0448 \u043A\u043E\u0434...",
       value: attributes.trebaCode,
       onChange: newtext => setAttributes({

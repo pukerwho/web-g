@@ -11,7 +11,7 @@ registerBlockType('treba/code-block', {
     trebaCode: {
       type: 'string',
       source: 'html',
-      selector: 'pre'
+      selector: 'code',
     },
     trebaCodeLang: {
       type: 'string',
@@ -41,8 +41,9 @@ registerBlockType('treba/code-block', {
             </PanelRow>
           </PanelBody>
         </InspectorControls>
+
         <RichText
-          tagName="code"
+          tagName="pre"
           placeholder="Ваш код..."
           value={attributes.trebaCode}
           onChange={(newtext) => setAttributes({ trebaCode: newtext })}
