@@ -11,7 +11,11 @@ Template Name: Все записи
 <main id="primary" class="bg-white dark:bg-dark-lg">
   <div class="container pt-24 lg:pt-32">
     <h1 class="text-4xl font-black text-gray-800 dark:text-gray-200 text-center mb-12">
-      <span class="sketch-underline">Все записи</span></h1>
+      <span class="sketch-underline">Все записи</span>
+    </h1>
+    <div class="mb-12">
+      <?php get_template_part('template-parts/components/top-category'); ?>  
+    </div>
     <div class="flex flex-col lg:flex-row flex-wrap lg:-mx-4">
       <div class="w-full lg:w-2/3 lg:px-4">
         <div class="flex flex-wrap flex-col mb-6">

@@ -16,6 +16,11 @@ function crb_post_theme_options() {
         )
       ) )
   ) );
+  Container::make( 'post_meta', 'More' )
+    ->where( 'post_type', '=', 'questions' )
+    ->add_fields( array(
+      Field::make( 'checkbox', 'crb_q_solved', 'Решено?' ),
+  ) );  
 }
 
 ?>
