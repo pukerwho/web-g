@@ -16,11 +16,14 @@ Template Name: Все записи
       <div class="w-full lg:w-2/3 lg:px-4">
         <div class="flex flex-wrap flex-col mb-6">
           <?php 
-            $current_page = !empty( $_GET['page'] ) ? $_GET['page'] : 1;
+            global $wp_query, $wp_rewrite;  
+            $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
+
             $posts_list = new WP_Query( array( 
               'post_type' => 'post', 
               'posts_per_page' => 10,
-              'paged' => $current_page,
+              'order'    => 'DESC',
+              'paged' => $current,
             ) );
             if ($posts_list->have_posts()) : while ($posts_list->have_posts()) : $posts_list->the_post(); 
           ?>
@@ -32,14 +35,14 @@ Template Name: Все записи
         <div class="mb-6">
           <div class="flex items-center -mr-3">
             <?php 
-              $big = 999999999994; // уникальное число
+              $big = 9999999991; // уникальное число
               echo paginate_links( array(
-                'format' => '?page=%#%',
+                'format'  => 'page/%#%',
                 'total' => $posts_list->max_num_pages,
-                'current' => $current_page,
+                'current' => $current,
                 'prev_next' => true,
-                'next_text' => (''),
-                'prev_text' => (''),
+                'next_text' => ('>'),
+                'prev_text' => ('<'),
               )); 
             ?>
           </div>
