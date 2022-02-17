@@ -30,5 +30,33 @@ $('.js-toggle-light').on('click', function(){
     document.documentElement.classList.remove('dark');
     localStorage.theme = 'light';
   }
-  console.log(dataLight);
 });
+
+// Form - Q
+const modalScriptURL = 'https://script.google.com/macros/s/AKfycbwzUngEckIybjllmma3jrYSkTtDK68cagV0-0FGTGAniLfp24Bd7B9T2cqG43D7qFLL/exec'
+const form_q = document.forms['form_q']
+if (form_q) {
+  form_q.addEventListener('submit', e => {
+    e.preventDefault()
+    let this_form = form_q
+    let data = new FormData(form_q)
+    fetch(modalScriptURL, { method: 'POST', mode: 'cors', body: data})
+      .then(response => showSuccessMessage(data, this_form))
+      .catch(error => console.error('Error!', error.message))
+  })  
+}
+
+function showSuccessMessage(data, this_form){
+  this_form.reset();
+  $('.form_q_success').addClass('block my-4').removeClass('hidden');
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'Форма',
+    eventAction: 'Отправили вопрос',
+  })
+  setTimeout(function(){
+    $('.form_q_success').removeClass('block my-4').addClass('hidden');
+  }, 4500)
+}
+
+console.log('form1');

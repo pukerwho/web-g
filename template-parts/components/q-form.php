@@ -8,9 +8,10 @@
         <input type="text" name="Title" placeholder="Заголовок. В чем заключается ваш вопрос."  class="custom-input" required>
         <textarea name="Content" rows="5" class="custom-input" placeholder="Основная часть. Напишите всю информацию, чтобы получить точный ответ." required></textarea>
       </div>
-      <button type="submit" class="form_order_button w-full block bg-indigo-600 hover:bg-indigo-500 text-white rounded px-4 py-2 mb-2">
+      <button type="submit" class="w-full block bg-indigo-600 hover:bg-indigo-500 text-white rounded px-4 py-2 mb-2">
         <span>Задать вопрос</span>
       </button>
     </form>
+    <div class="form_q_success hidden text-gray-800 dark:text-gray-200 bg-yellow-200 dark:bg-dark-lg rounded px-4 py-2 mt-4">Мы получили ваш вопрос. Сейчас он на проверке у модератора.</div>
   </div>
 </div>
