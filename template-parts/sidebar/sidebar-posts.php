@@ -53,7 +53,7 @@
     </div>
     <div class="text-2xl uppercase font-bold text-gray-800">Patreon</div>
   </div>
-  <div>
+  <div class="js-analytics" data-analytics-category="Клик" data-analytics-action="Patreon (сайдбар)">
     <a href="https://www.patreon.com/webgolovolomki" target="_blank" class="block border border-indigo-500 text-gray-800 dark:text-gray-200 text-center rounded px-4 py-2">Перейти на Patreon</a>
   </div>
 </div>
@@ -72,7 +72,7 @@
     <div class="flex items-center justify-between mb-2">
       <div class="flex items-center">
         <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4"><?php echo $number_hosting; ?></div>
-        <div class="text-gray-800 dark:text-gray-200"><a href="<?php echo $best_hoster['crb_best_hoster_link']; ?>" target="_blank"><?php echo $best_hoster['crb_best_hoster_name']; ?></a></div>
+        <div class="text-gray-800 dark:text-gray-200"><a href="<?php echo $best_hoster['crb_best_hoster_link']; ?>" target="_blank" class="js-analytics" data-analytics-category="Клик" data-analytics-action="Хостинг (сайдбар)"><?php echo $best_hoster['crb_best_hoster_name']; ?></a></div>
       </div>
       <div class="text-gray-800 dark:text-gray-200 opacity-75"><?php echo $best_hoster['crb_best_hoster_rating']; ?></div>
     </div>

@@ -20,7 +20,7 @@
       }
     ?>
     <div class=" w-full relative cursor-pointer mb-2">
-      <a href="<?php echo $course_link; ?>" class="absolute-link" target="_blank"></a>
+      <a href="<?php echo $course_link; ?>" class="absolute-link js-analytics" target="_blank" data-analytics-category="Клик" data-analytics-action="Курсы (сайдбар)"></a>
       <div class="flex items-center justify-between text-gray-800 dark:text-gray-200 bg-gray-300 dark:bg-dark-md rounded px-4 py-3">
         <div class="text-lg font-light mr-2"><?php echo $course['crb_best_course_name']; ?></div>
         <div class="text-green-600 rotate-45">

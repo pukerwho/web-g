@@ -28,7 +28,7 @@
       <div class="text-gray-200">Полезные подборки</div>
     </div>
   </div>
-  <div class="mb-2">
+  <div class="mb-2 js-analytics" data-analytics-category="Клик" data-analytics-action="Telegram-канал (сайдбар)">
     <a href="https://t.me/css_golovolomki" class="block bg-indigo-600 text-gray-200 text-center rounded px-6 py-3" target="_blank">Перейти в Telegram</a>
   </div>
 </div>
