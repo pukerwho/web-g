@@ -70,8 +70,8 @@
 						<!-- Декорация -->
 					</div>
 				</div>
-				<div class="flex justify-center js-analytics" data-analytics-category="Клик" data-analytics-action="Подписаться на Ютую">
-					<a href="https://www.youtube.com/channel/UCLFjGPaobP5RrvweG-p_lpA?sub_confirmation=1" class="block bg-red-600 text-white rounded px-4 py-2">Подписаться на канал</a>
+				<div class="relative flex justify-center js-analytics" data-analytics-category="Клик" data-analytics-action="Подписаться на Ютуб">
+					<a href="https://www.youtube.com/channel/UCLFjGPaobP5RrvweG-p_lpA?sub_confirmation=1" target="_blank" class="block bg-red-600 text-white rounded px-4 py-2">Подписаться на канал</a>
 				</div>
 			</div>
 		</div>
