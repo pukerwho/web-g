@@ -16,7 +16,7 @@
 }
     </code></pre>
   </div>
-  <div>
+  <div class="js-analytics" data-analytics-category="Клик" data-analytics-action="Сss викторина (сайдбар)">
     <div class="bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center cursor-pointer p-2 mb-2 js-sidebar-item" data-q-css="1">10px</div>
     <div class="bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center cursor-pointer p-2 mb-2  js-sidebar-item" data-q-css="2">20px</div>
     <div class="bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center cursor-pointer p-2 mb-2  js-sidebar-item" data-q-css="3">30px</div>

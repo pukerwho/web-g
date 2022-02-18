@@ -58,5 +58,3 @@ function showSuccessMessage(data, this_form){
     $('.form_q_success').removeClass('block my-4').addClass('hidden');
   }, 4500)
 }
-
-console.log('form1');

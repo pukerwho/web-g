@@ -147,6 +147,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
   
 
  });
+$('.js-analytics').on('click', function(){
+  var eventCategory = $(this).data('analytics-category');
+  var eventAction = $(this).data('analytics-action');
+  googleAnalyticsEvent(eventCategory, eventAction);
+});
+
+function googleAnalyticsEvent(eventCategory, eventAction){
+  ga('send', {
+    hitType: 'event',
+    eventCategory: eventCategory,
+    eventAction: eventAction,
+  })
+}
 $('.hamburger-toggle').on('click', function(){
   $(this).toggleClass('open');
   $('.mobile-menu').toggleClass('hidden').toggleClass('z-10');
@@ -207,5 +220,3 @@ function showSuccessMessage(data, this_form){
     $('.form_q_success').removeClass('block my-4').addClass('hidden');
   }, 4500)
 }
-
-console.log('form1');
