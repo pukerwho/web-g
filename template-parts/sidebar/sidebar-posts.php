@@ -41,7 +41,20 @@
   </div>
 </div>
 
-<?php get_template_part('template-parts/components/telegram-css'); ?>  
+<?php get_template_part('template-parts/components/telegram-css'); ?> 
+
+<div class="mb-6">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6649504422654100"
+crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-format="autorelaxed"
+data-ad-client="ca-pub-6649504422654100"
+data-ad-slot="7674882173"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
 
 <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
   <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Вступай в клуб</div>
