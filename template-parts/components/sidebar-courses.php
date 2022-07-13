@@ -3,10 +3,11 @@
   <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🧑‍🎓</span>Рекомендуемые курсы</div>
   <div>
     <?php
-    $PublicIP = $_SERVER['REMOTE_ADDR'];
-    $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
-    $json     = json_decode($json, true);
-    $country  = $json['country'];
+    // $PublicIP = $_SERVER['REMOTE_ADDR'];
+    // $json     = file_get_contents("http://ipinfo.io/$PublicIP/geo");
+    // $json     = json_decode($json, true);
+    // $country  = $json['country'];
+    $country = 'UA';
     
     $best_courses = carbon_get_theme_option('crb_best_courses'); 
     foreach ($best_courses as $course): 

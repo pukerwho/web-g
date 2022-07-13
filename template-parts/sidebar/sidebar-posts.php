@@ -44,8 +44,6 @@
 <?php get_template_part('template-parts/components/telegram-css'); ?> 
 
 <div class="mb-6">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6649504422654100"
-crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
 style="display:block"
 data-ad-format="autorelaxed"
