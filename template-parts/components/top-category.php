@@ -20,7 +20,7 @@
             $tilda_category = get_category('3');
             $tilda_category_count = $tilda_category->category_count;
           ?>
-          <?php echo $tilda_category_count; ?> записей
+          <?php echo $tilda_category_count; ?> <?php _e('записей', 'web-g'); ?>
         </div>
       </div>  
     </div>
@@ -39,7 +39,7 @@
             $css_category = get_category('5');
             $css_category_count = $css_category->category_count;
           ?>
-          <?php echo $css_category_count; ?> записей
+          <?php echo $css_category_count; ?> <?php _e('записей', 'web-g'); ?>
         </div>
       </div>  
     </div>
@@ -58,7 +58,7 @@
             $wp_category = get_category('4');
             $wp_category_count = $wp_category->category_count;
           ?>
-          <?php echo $wp_category_count; ?> записей
+          <?php echo $wp_category_count; ?> <?php _e('записей', 'web-g'); ?>
         </div>
       </div>  
     </div>
@@ -79,7 +79,7 @@
             $seo_category = get_category('2');
             $seo_category_count = $seo_category->category_count;
           ?>
-          <?php echo $seo_category_count; ?> записей
+          <?php echo $seo_category_count; ?> <?php _e('записей', 'web-g'); ?>
         </div>
       </div>  
     </div>

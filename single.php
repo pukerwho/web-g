@@ -15,13 +15,13 @@
               <ul class="flex items-center flex-wrap">
                 <li itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem' class="breadcrumbs_item mr-8 pl-8">
                   <a itemprop="item" href="<?php echo home_url(); ?>" class="text-blue-700 dark:text-blue-400">
-                    <span itemprop="name"><?php _e( 'Главная', 'restx' ); ?></span>
+                    <span itemprop="name"><?php _e( 'Главная', 'web-g' ); ?></span>
                   </a>                        
                   <meta itemprop="position" content="1">
                 </li>
                 <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs_item mr-8">
                   <a itemprop="item" href="<?php echo get_post_type_archive_link('post'); ?>" class="text-blue-700 dark:text-blue-400">
-                    <span itemprop="name"><?php _e( 'Все записи', 'restx' ); ?></span>
+                    <span itemprop="name"><?php _e( 'Все записи', 'web-g' ); ?></span>
                   </a>                        
                   <meta itemprop="position" content="2">
                 </li>
@@ -33,12 +33,12 @@
                   <a itemprop="item" href="<?php echo get_term_link($post_item->term_id, 'category') ?>" class="text-blue-700 dark:text-blue-400">
                     <span itemprop="name"><?php echo $post_item->name; ?></span>
                   </a>                        
-                  <meta itemprop="position" content="2">
+                  <meta itemprop="position" content="3">
                 </li>
                 <?php endforeach; ?>
                 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="breadcrumbs_item">
                   <span itemprop="name"><?php the_title(); ?></span>
-                  <meta itemprop="position" content="3" />
+                  <meta itemprop="position" content="4" />
                 </li>
               </ul>
             </div>
@@ -54,13 +54,13 @@
             <!-- Meta -->
             <div class="flex flex-col lg:flex-row lg:items-center text-gray-800 dark:text-gray-200 opacity-75 mb-6">
               <div class="mb-2 lg:mb-0 mr-6">
-                <span class="mr-2">🗓️</span> Обновлено: <?php echo get_the_date('d.m.Y'); ?>
+                <span class="mr-2">🗓️</span> <?php _e('Обновлено', 'web-g'); ?>: <?php echo get_the_date('d.m.Y'); ?>
               </div>
               <div class="mb-2 lg:mb-0 mr-6">
-                <span class="mr-2">💬</span>Комментариев: <?php echo get_comments_number(); ?>
+                <span class="mr-2">💬</span><?php _e('Комментариев', 'web-g'); ?>: <?php echo get_comments_number(); ?>
               </div>
               <div>
-                <span class="mr-2">👁️</span>Просмотров: <?php echo $countNumber; ?>
+                <span class="mr-2">👁️</span><?php _e('Просмотров', 'web-g'); ?>: <?php echo $countNumber; ?>
               </div>
             </div>
             <!-- END Meta -->
@@ -107,32 +107,8 @@
             </div>
             <hr>
             <!-- END Автор -->
-            <div class="mb-10">
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6649504422654100" crossorigin="anonymous"></script>
-              <ins class="adsbygoogle"
-              style="display:block; text-align:center;"
-              data-ad-layout="in-article"
-              data-ad-format="fluid"
-              data-ad-client="ca-pub-6649504422654100"
-              data-ad-slot="2469838718"></ins>
-              <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
-            </div>
             <div class="content mb-10">
               <?php the_content(); ?>
-            </div>
-            <div class="mb-10">
-              <!-- Single - bottom -->
-              <ins class="adsbygoogle"
-              style="display:block"
-              data-ad-client="ca-pub-6649504422654100"
-              data-ad-slot="2557183214"
-              data-ad-format="auto"
-              data-full-width-responsive="true"></ins>
-              <script>
-              (adsbygoogle = window.adsbygoogle || []).push({});
-              </script>
             </div>
           </article>
 
@@ -147,13 +123,13 @@
             $down_meta_relust = $down_post_meta ? $down_post_meta : '0';
           ?>
           <div class="text-gray-800 dark:text-gray-200 mb-12 js-post-vote" data-post-id="<?php echo $currentId; ?>">
-            <div class="text-xl text-center font-semibold mb-6">Статья была полезной?</div>
+            <div class="text-xl text-center font-semibold mb-6"><?php _e('Статья была полезной?', 'web-g'); ?></div>
             <div class="flex justify-center items-center text-md lg:text-lg -mx-2 lg:-mx-4">
               <!-- Up -->
               <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="<?php echo $up_meta; ?>">
                 <div class="flex justify-center items-center bg-gray-200 dark:bg-dark-md rounded text-center px-3 lg:px-6 py-2">
                   <div class="mr-4">👍</div>
-                  <div>Да - <span class="js-vote-result"><?php echo $up_meta_relust; ?></span></div>
+                  <div><?php _e('Да', 'web-g'); ?> - <span class="js-vote-result"><?php echo $up_meta_relust; ?></span></div>
                 </div>  
               </div>
               <!-- END Up -->
@@ -162,7 +138,7 @@
               <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="<?php echo $down_meta; ?>">
                 <div class="flex justify-center items-center bg-gray-200 dark:bg-dark-md rounded text-center px-3 lg:px-6 py-2">
                   <div class="mr-4">👎</div>
-                  <div>Нет - <span class="js-vote-result"><?php echo $down_meta_relust; ?></span></div>
+                  <div><?php _e('Нет', 'web-g'); ?> - <span class="js-vote-result"><?php echo $down_meta_relust; ?></span></div>
                 </div>  
               </div>
               <!-- END Down -->
@@ -178,7 +154,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
               </div>
-              <div class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6">Рекомендуем к прочтению</div>
+              <div class="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-6"><?php _e('Рекомендуем к прочтению', 'web-g'); ?></div>
 
               <?php if (carbon_get_the_post_meta('crb_similar_links')): ?>
                 <!-- Cами выбираем ссылки -->
@@ -228,7 +204,7 @@
 
           <!-- Комментарии -->
           <div>
-            <div class="text-2xl bg-indigo-200 dark:bg-slate-600 text-gray-800 dark:text-gray-200 rounded px-6 py-2 mb-6"><span class="mr-2">💬</span> Комментарии: </div>
+            <div class="text-2xl bg-indigo-200 dark:bg-slate-600 text-gray-800 dark:text-gray-200 rounded px-6 py-2 mb-6"><span class="mr-2">💬</span><?php _e('Комментарии', 'web-g'); ?>: </div>
             <?php comments_template(); ?>
           </div>
           <!-- END Комментарии -->

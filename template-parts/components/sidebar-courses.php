@@ -1,6 +1,6 @@
 <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
-  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Где учиться</div>
-  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🧑‍🎓</span>Рекомендуемые курсы</div>
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Где учиться', 'web-g'); ?></div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🧑‍🎓</span><?php _e('Рекомендуемые курсы', 'web-g'); ?></div>
   <div>
     <?php
     // $PublicIP = $_SERVER['REMOTE_ADDR'];

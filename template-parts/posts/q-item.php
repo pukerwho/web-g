@@ -12,7 +12,7 @@
               <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
             </svg>
           </div>
-          <div>Решено</div>
+          <div><?php _e('Решено', 'web-g'); ?></div>
         </div>
       </div>
       <!-- END Решено -->
@@ -25,7 +25,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
             </svg>
           </div>
-          <div>Ответов: <?php echo get_comments_number(); ?></div>
+          <div><?php _e('Ответов', 'web-g'); ?>: <?php echo get_comments_number(); ?></div>
         </div>
       </div>
       <!-- END Ответов -->

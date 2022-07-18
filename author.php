@@ -21,7 +21,7 @@
       <div class="w-full lg:w-8/12 lg:px-6">
         <!-- Описание -->
         <div class="mb-12">
-          <div class="text-xl text-gray-800 dark:text-gray-200">Привет, меня зовут</div>
+          <div class="text-xl text-gray-800 dark:text-gray-200"><?php _e('Привет, меня зовут', 'web-g'); ?></div>
           <div class="text-3xl text-gray-800 dark:text-gray-200 font-bold mb-6"><?php echo get_the_author(); ?></div>
           <div class="text-gray-800 dark:text-gray-200 opacity-75">
             <?php 
@@ -34,7 +34,7 @@
         <hr>
         <!-- Публикации -->
         <div>
-          <div class="text-2xl lg:text-3xl text-gray-800 dark:text-gray-200 mb-6">Все публикации</div>
+          <div class="text-2xl lg:text-3xl text-gray-800 dark:text-gray-200 mb-6"><?php _e('Все публикации', 'web-g'); ?></div>
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <!-- Post item -->
             <?php get_template_part('template-parts/posts/post-item'); ?>

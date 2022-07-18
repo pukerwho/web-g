@@ -14,7 +14,7 @@
             </svg>
           </div>
           <div class="lg:text-lg">
-            Все вопросы
+            <?php _e('Все вопросы', 'web-g'); ?>
           </div>
         </div>
       </div>
@@ -24,13 +24,13 @@
         <!-- Meta -->
         <div class="flex items-center text-gray-800 dark:text-gray-200 opacity-75  mb-6">
           <div class="mr-6">
-            <span class="mr-2">🗓️</span> Вопрос задан: <?php echo get_the_date('d.m.Y'); ?>
+            <span class="mr-2">🗓️</span> <?php _e('Вопрос задан', 'web-g'); ?>: <?php echo get_the_date('d.m.Y'); ?>
           </div>
           <div class="mr-6">
-            <span class="mr-2">💬</span>Ответов: <?php echo get_comments_number(); ?>
+            <span class="mr-2">💬</span><?php _e('Ответов', 'web-g'); ?>: <?php echo get_comments_number(); ?>
           </div>
           <div>
-            <span class="mr-2">👁️</span>Просмотров: <?php echo $countNumber; ?>
+            <span class="mr-2">👁️</span><?php _e('Просмотров', 'web-g'); ?>: <?php echo $countNumber; ?>
           </div>
         </div>
         <!-- END Meta -->
@@ -42,7 +42,7 @@
             <div class="content text-gray-800 dark:text-gray-200 mb-6">
               <?php the_content(); ?>
             </div>
-            <h2 class="text-gray-800 dark:text-gray-200 text-xl font-semibold mb-6">Ответы:</h2>
+            <h2 class="text-gray-800 dark:text-gray-200 text-xl font-semibold mb-6"><?php _e('Ответы', 'web-g'); ?>:</h2>
             <div>
               <?php comments_template(); ?>
             </div>

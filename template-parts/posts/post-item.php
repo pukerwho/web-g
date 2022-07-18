@@ -18,7 +18,7 @@
     <div class="flex items-center mb-4 lg:mb-0">
       <div class="mr-3">👍</div> 
       <div class="text-gray-800 dark:text-gray-200">
-        Полезно - <span class="w-6 h-6 inline-flex justify-center items-center bg-green-500 text-white rounded"><?php echo $up_meta_relust; ?></span></div>
+        <?php _e('Полезно', 'web-g'); ?> - <span class="w-6 h-6 inline-flex justify-center items-center bg-green-500 text-white rounded"><?php echo $up_meta_relust; ?></span></div>
     </div>
   </div>
   <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4 lg:mb-6">
@@ -56,7 +56,7 @@
       <div><a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>" class="font-light text-gray-800 dark:text-gray-200"><?php echo get_the_author(); ?></a></div>
     </div>
     <div class="flex justify-center mb-2 lg:mb-0">
-      <a href="<?php the_permalink(); ?>" class="bg-dark-md rounded-lg text-white text-center px-4 py-2 lg:py-3">Читать дальше</a>
+      <a href="<?php the_permalink(); ?>" class="bg-dark-md rounded-lg text-white text-center px-4 py-2 lg:py-3"><?php _e('Читать дальше', 'web-g'); ?></a>
     </div>
   </div>
 </div>

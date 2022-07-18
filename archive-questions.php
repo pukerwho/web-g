@@ -15,7 +15,7 @@
         <polygon fill="#f17c30" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
       </svg>
     </div>
-    <div class="absolute top-20 lg:top-auto bottom-auto lg:top-10 left-2 lg:-left-4 z-0">
+    <div class="absolute top-20 bottom-auto lg:top-10 left-2 lg:-left-4 z-0">
       <svg width="27px" height="27px">
         <path fill="#6f42c1" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
       </svg>
@@ -27,14 +27,14 @@
     </div>
     <!-- END Декоративные элементы -->
     <h1 class="text-4xl font-black text-gray-800 dark:text-gray-200 text-center mb-12">
-      <span class="sketch-underline">Вопросы и ответы</span>
+      <span class="sketch-underline"><?php _e('Вопросы и ответы', 'web-g'); ?></span>
     </h1>
     <div class="flex flex-col lg:flex-row flex-wrap lg:-mx-4">
       
       <div class="w-full lg:w-7/12 lg:px-4 mb-6">
         <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-6 py-2 lg:py-4 mb-6">
           <div class="text-gray-800 dark:text-gray-200 text-xl font-semibold border-b border-gray-200 dark:border-gray-600 pb-3 mb-6">
-            <span class="mr-2">🔥</span>Популярные вопросы
+            <span class="mr-2">🔥</span><?php _e('Популярные вопросы', 'web-g'); ?>
           </div>
           
           <?php 
@@ -53,7 +53,7 @@
 
         <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-6 py-2 lg:py-4 mb-6">
           <div class="text-gray-800 dark:text-gray-200 text-xl font-semibold border-b border-gray-200 dark:border-gray-600 pb-3 mb-6">
-            <span class="mr-2">🗓️</span> Новые вопросы
+            <span class="mr-2">🗓️</span> <?php _e('Новые вопросы', 'web-g'); ?>
           </div>
           
           <?php 
