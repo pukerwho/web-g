@@ -7,7 +7,7 @@ function truemisha_change_labels( $fields ){
   // можно подсмотреть исходный HTML через:
   // print_r( $fields );
 
-  $fields[ 'author' ] = '<div class="mb-4"><input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required" placeholder="Как вас зовут?" class="w-full text-gray-800 dark:text-gray-200 border rounded border-gray-200 dark:border-gray-500 dark:bg-dark-md py-2 px-4 mb-2"></div>';
+  $fields[ 'author' ] = '<div class="mb-4"><input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required" placeholder="'. __("Как вас зовут?", "web-g") . '" class="w-full text-gray-800 dark:text-gray-200 border rounded border-gray-200 dark:border-gray-500 dark:bg-dark-md py-2 px-4 mb-2"></div>';
 
   $fields[ 'email'] = '<div class="mb-6"><input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required" placeholder="Ваш email" class="w-full text-gray-800 dark:text-gray-200 border rounded border-gray-200 dark:border-gray-500 dark:bg-dark-md py-2 px-4 mb-2"></div>';
  
@@ -36,7 +36,7 @@ function remove_textarea($defaults)
 
 function add_textarea()
 {
-    echo '<div class="comment-form-comment mb-2"><textarea id="comment" name="comment" rows="4" placeholder="Ваш комментарий" aria-required="true" class="w-full text-gray-800 dark:text-gray-200 border rounded border-gray-200 dark:border-gray-500 dark:bg-dark-md py-2 px-4 mb-2"></textarea></div>';
+    echo '<div class="comment-form-comment mb-2"><textarea id="comment" name="comment" rows="4" placeholder="'. __("Ваш комментарий", "web-g") . '" aria-required="true" class="w-full text-gray-800 dark:text-gray-200 border rounded border-gray-200 dark:border-gray-500 dark:bg-dark-md py-2 px-4 mb-2"></textarea></div>';
 }
 
 //Удаляем нотис перед формой комментирования

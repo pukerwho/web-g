@@ -21,7 +21,7 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 	 * as indicating support for post thumbnails.
 	 */
 	function tailwind_wp_setup() {
-		load_theme_textdomain( 'odessa', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'web-g', get_template_directory() . '/languages' );
 
 		add_theme_support( 'automatic-feed-links' );
 		// add_theme_support( 'title-tag' );
@@ -29,9 +29,9 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 
 		register_nav_menus(
 			array(
-				'header' => esc_html__( 'Header', 'odessa' ),
-        'mobile' => esc_html__( 'Mobile', 'odessa' ),
-        'footer_info' => esc_html__( 'Footer info', 'odessa' ),
+				'header' => esc_html__( 'Header', 'web-g' ),
+        'mobile' => esc_html__( 'Mobile', 'web-g' ),
+        'footer_info' => esc_html__( 'Footer info', 'web-g' ),
 			)
 		);
 

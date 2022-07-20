@@ -68,7 +68,34 @@ if ( is_singular( 'places' ) ) {
 						</div>
 					</div>
 					<div class="ml-8">
-						<a href="#" class="block bg-indigo-600 hover:bg-blue-500 text-white rounded px-4 py-2">Tilda + SEO = ❤️</a>
+						<!-- Languages -->
+						<?php if (function_exists('pll_the_languages')): ?>
+							<?php 
+								$currentlang = get_bloginfo('language'); 
+								$home_path = home_url();
+
+								$translations = pll_the_languages( array( 'hide_current' => 1, 'raw' => 1 ) ); 
+								foreach ($translations as $translation):
+							?>
+								<div class="lang flex items-center relative">
+									<a href="<?php echo $translation['url'] ?>" class="absolute-link"></a>
+									<?php if ($currentlang === 'uk'): ?>
+									<div class="relative w-[32px] h-[20px] bg-indigo-600 rounded-full mr-2">
+										<div class="absolute right-[2px] top-[2px] w-[16px] h-[16px] rounded-full bg-white"></div>
+									</div>	
+									<?php else: ?>
+									<div class="relative w-[32px] h-[20px] bg-gray-400 rounded-full mr-2">
+										<div class="absolute left-[2px] top-[2px] w-[16px] h-[16px] rounded-full bg-white"></div>
+									</div>
+									<?php endif; ?>
+									<div class="text-lg relative top-[1px]">
+										🇺🇦
+									</div>
+								</li>
+							<?php endforeach; ?>
+						<?php endif; ?>
+						<!-- END Languages -->
+						<a href="#" class="hidden bg-indigo-600 hover:bg-blue-500 text-white rounded px-4 py-2">Tilda + SEO = ❤️</a>
 					</div>	
 				</div>
 				
