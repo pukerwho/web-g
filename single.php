@@ -57,7 +57,16 @@
                 <span class="mr-2">🗓️</span> <?php _e('Обновлено', 'web-g'); ?>: <?php echo get_the_date('d.m.Y'); ?>
               </div>
               <div class="mb-2 lg:mb-0 mr-6">
-                <span class="mr-2">💬</span><?php _e('Комментариев', 'web-g'); ?>: <?php echo get_comments_number(); ?>
+                <span class="mr-2">💬</span><?php _e('Комментариев', 'web-g'); ?>: 
+                <?php 
+                  $comment_count = 0;
+                  $translation_post_id = pll_get_post_translations($currentId);
+                  foreach ($translation_post_id as $item) {
+                    $current_count = get_comments_number($item);
+                    $comment_count = $comment_count + $current_count;
+                  }
+                  echo $comment_count;
+                ?>
               </div>
               <div>
                 <span class="mr-2">👁️</span><?php _e('Просмотров', 'web-g'); ?>: <?php echo $countNumber; ?>

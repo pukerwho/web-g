@@ -1456,13 +1456,13 @@ hr {
   color: rgb(29 78 216 / var(--tw-text-opacity));
 }
 .comment.depth-2 {
-  margin-left: 0.5rem;
-}
-.comment.depth-3 {
   margin-left: 1rem;
 }
-.comment.depth-4 {
+.comment.depth-3 {
   margin-left: 1.5rem;
+}
+.comment.depth-4 {
+  margin-left: 2rem;
 }
 .comment-content a {
   --tw-text-opacity: 1;

@@ -112,13 +112,13 @@ hr {
   @apply text-blue-700;
 }
 .comment.depth-2 {
-  @apply ml-2;
-}
-.comment.depth-3 {
   @apply ml-4;
 }
+.comment.depth-3 {
+  @apply ml-6;
+}
 .comment.depth-4 {
-  @apply ml-6;  
+  @apply ml-8;  
 }
 .comment-content a {
   @apply text-blue-700 dark:text-blue-500;

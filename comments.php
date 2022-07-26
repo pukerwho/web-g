@@ -3,14 +3,23 @@
 } ?>
 
 <div id="comments">
-
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
 
-		<?php the_comments_navigation(); ?>
+		$post__in_array = array();
+		$translation_id = pll_get_post_translations(get_the_ID());
+		foreach ($translation_id as $tr_id) {
+			array_push($post__in_array, $tr_id);
+		}
+		$args = array(
+			'post__in' => $post__in_array,
+			'status' => 'approve'
+		);
 
+		$comments = get_comments( $args );
+	?>
+	
+	<?php the_comments_navigation(); ?>
+	
 		<div class="">
 			<?php
 			wp_list_comments(
@@ -19,7 +28,7 @@
 					'type'       => 'comment',
 					'style'      => 'div',
 					'short_ping' => true,
-				)
+				), $comments
 			);
 			?>
 		</div>
@@ -34,7 +43,7 @@
 			<?php
 		endif;
 
-	endif; // Check for have_comments().
+	
 	?>
 
 	<div class="">
