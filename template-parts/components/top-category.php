@@ -30,7 +30,7 @@
     <div class="relative flex items-center bg-white dark:bg-dark-xl dark:text-gray-200 rounded-lg shadow-md p-3">
       <a href="<?php echo get_category_link( '5' ); ?>" class="absolute-link"></a>
       <div class="mr-4">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/CSS3_logo.svg" alt="CSS3" width="40">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/CSS3_logo.svg" alt="CSS3" width="40">
       </div>
       <div>
         <div class="text-xl font-semibold">HTML, CSS, JS</div>

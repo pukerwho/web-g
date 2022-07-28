@@ -3,6 +3,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php 
     $currentId = get_the_ID();
+    $translated_ids = pll_get_post_translations($currentId);
     $countNumber = tutCount($currentId);
   ?>
   <main id="primary" class="bg-white dark:bg-dark-lg">
@@ -91,7 +92,7 @@
                   <?php if ($avatar): ?>
                     <?php echo $avatar; ?>
                   <?php else: ?>
-                    <img src="<?php bloginfo('template_part'); ?>/img/user.svg" width="35px">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/user.svg" width="35">
                   <?php endif; ?>
                 <?php endif; ?>
                 
@@ -122,32 +123,23 @@
           </article>
 
           <!-- Оценка -->
-          <?php
-            $up_meta = 'meta_up_'.$currentId;
-            $down_meta = 'meta_down_'.$currentId;
-
-            $up_post_meta = get_post_meta( $currentId, $up_meta, true );
-            $up_meta_relust = $up_post_meta ? $up_post_meta : '0';
-            $down_post_meta = get_post_meta( $currentId, $down_meta, true );
-            $down_meta_relust = $down_post_meta ? $down_post_meta : '0';
-          ?>
-          <div class="text-gray-800 dark:text-gray-200 mb-12 js-post-vote" data-post-id="<?php echo $currentId; ?>">
+          <div class="text-gray-800 dark:text-gray-200 mb-12 js-post-vote" data-post-id="<?php echo $currentId; ?>" data-local-translate-id="<?php foreach( $translated_ids as $id) {echo $id;} ?>">
             <div class="text-xl text-center font-semibold mb-6"><?php _e('Статья была полезной?', 'web-g'); ?></div>
             <div class="flex justify-center items-center text-md lg:text-lg -mx-2 lg:-mx-4">
               <!-- Up -->
-              <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="<?php echo $up_meta; ?>">
+              <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="meta_up_">
                 <div class="flex justify-center items-center bg-gray-200 dark:bg-dark-md rounded text-center px-3 lg:px-6 py-2">
                   <div class="mr-4">👍</div>
-                  <div><?php _e('Да', 'web-g'); ?> - <span class="js-vote-result"><?php echo $up_meta_relust; ?></span></div>
+                  <div><?php _e('Да', 'web-g'); ?> - <span class="js-vote-result"><?php echo get_vote_count($currentId, 'meta_up_'); ?></span></div>
                 </div>  
               </div>
               <!-- END Up -->
 
               <!-- Down -->
-              <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="<?php echo $down_meta; ?>">
+              <div class="w-1/2 lg:w-auto cursor-pointer px-2 lg:px-4 js-vote-item" data-vote-item="meta_down_">
                 <div class="flex justify-center items-center bg-gray-200 dark:bg-dark-md rounded text-center px-3 lg:px-6 py-2">
                   <div class="mr-4">👎</div>
-                  <div><?php _e('Нет', 'web-g'); ?> - <span class="js-vote-result"><?php echo $down_meta_relust; ?></span></div>
+                  <div><?php _e('Нет', 'web-g'); ?> - <span class="js-vote-result"><?php echo get_vote_count($currentId, 'meta_down_'); ?></span></div>
                 </div>  
               </div>
               <!-- END Down -->

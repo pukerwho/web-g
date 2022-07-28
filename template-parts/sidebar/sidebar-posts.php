@@ -22,7 +22,7 @@
             <?php if ($avatar): ?>
               <?php echo $avatar; ?>
             <?php else: ?>
-              <img src="<?php bloginfo('template_part'); ?>/img/user.svg" width="35px">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/user.svg" width="35px">
             <?php endif; ?>
           <?php endif; ?>
         </div>

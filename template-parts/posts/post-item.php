@@ -1,9 +1,6 @@
 <?php 
   //Полезных голосов
   $currentId = get_the_ID();
-  $up_meta = 'meta_up_'.$currentId;
-  $up_post_meta = get_post_meta( $currentId, $up_meta, true );
-  $up_meta_relust = $up_post_meta ? $up_post_meta : '0';
 ?>
 
 <div class="w-full bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-6 py-2 lg:py-4 mb-6">
@@ -18,7 +15,7 @@
     <div class="flex items-center mb-4 lg:mb-0">
       <div class="mr-3">👍</div> 
       <div class="text-gray-800 dark:text-gray-200">
-        <?php _e('Полезно', 'web-g'); ?> - <span class="w-6 h-6 inline-flex justify-center items-center bg-green-500 text-white rounded"><?php echo $up_meta_relust; ?></span></div>
+        <?php _e('Полезно', 'web-g'); ?> - <span class="w-6 h-6 inline-flex justify-center items-center bg-green-500 text-white rounded"><?php echo get_vote_count($currentId, 'meta_up_'); ?></span></div>
     </div>
   </div>
   <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4 lg:mb-6">
@@ -48,7 +45,7 @@
           <?php if ($avatar): ?>
             <?php echo $avatar; ?>
           <?php else: ?>
-            <img src="<?php bloginfo('template_part'); ?>/img/user.svg" width="35px">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/user.svg" width="35px">
           <?php endif; ?>
         <?php endif; ?>
         

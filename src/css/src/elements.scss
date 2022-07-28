@@ -72,7 +72,7 @@
   &_item {
     position: relative;
     &:first-of-type {
-      background: url('../../img/home.svg');
+      background: url('../../images/home.svg');
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -87,7 +87,7 @@
       height: 10px;
       position: absolute;
       top: 51%; right: -2rem;
-      background: url('../../img/breadcrumbs-arrow.svg');
+      background: url('../../images/breadcrumbs-arrow.svg');
       background-size: contain;
       background-repeat: no-repeat;
       -webkit-transform: translateY(-50%) translateX(-100%);
@@ -97,9 +97,18 @@
   }
 }
 
+hr {
+  background: url('../../images/hr.svg') center/5em 100% repeat-x;
+}
+
 .header-fixed {
   -webkit-animation: fadeInDown 0.5s forwards;
   animation: fadeInDown 0.5s forwards;
+}
+
+.sketch-underline {
+  background: url('../../images/sketch-underline.svg') bottom left/100% 0.75rem no-repeat;
+  padding-bottom: 0.1rem;
 }
 
 @-webkit-keyframes fadeInDown {

@@ -1,4 +1,11 @@
+var $ = require( 'jquery' );
+
 document.addEventListener("DOMContentLoaded", function(event) {
+  //Показуєм телеграм канал
+  function showTelegram(){
+    let sidebarVoteTelegram = document.querySelector('.sidebar-vote-js');
+    sidebarVoteTelegram.classList.remove('hidden');
+  }
   //Опрос в сайдбар
   const sidebarAnswer = 2;
   let sidebarVote = document.querySelector('.js-sidebar-vote');
@@ -26,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             item.classList.add('vote-wrong');
             document.querySelector('.js-sidebar-item[data-q-css="' + sidebarAnswer + '"]').classList.add('vote-correct');
           }
+          showTelegram();
         });
       })
     }  
@@ -34,23 +42,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //Опрос в публикации
   if (document.body.classList.contains('single')) {
-    let postVoteItems = document.querySelectorAll('.js-vote-item');
     let postVote = document.querySelector('.js-post-vote');
+    let postVoteItems = document.querySelectorAll('.js-vote-item');
+
     let postId = postVote.dataset.postId;  
+    let postTranslateIds = postVote.dataset.localTranslateId;  
+
     let postVoteLocal = localStorage.getItem('vote_post_'+postId);
+    let postVoteTranslate = localStorage.getItem('vote_post_'+postTranslateIds);
+    console.log(postVoteLocal);
 
     //Показываем результаты, если уже голосовал на странице
-    if (localStorage.getItem('vote_post_'+postId)) {
+    if (localStorage.getItem('vote_post_'+postId) ||  localStorage.getItem('vote_post_'+postTranslateIds)) {
       //Меняем цвет блока
-      console.log(postVoteLocal);
-      document.querySelector('.js-vote-item[data-vote-item="'+ postVoteLocal +'"] > div').classList.add('vote-active');
+      if (postVoteLocal) {
+        document.querySelector('.js-vote-item[data-vote-item="'+ postVoteLocal +'"] > div').classList.add('vote-active');
+      } else {
+        document.querySelector('.js-vote-item[data-vote-item="'+ postVoteTranslate +'"] > div').classList.add('vote-active');
+      }
+      
     }
 
     //Отслеживаем клик
     postVoteItems.forEach(item => {
       item.addEventListener('click', () => {
         // Проверяем голосовал ли уже или нет
-        if (localStorage.getItem('vote_post_'+postId)) {
+        if (localStorage.getItem('vote_post_'+postId) || localStorage.getItem('vote_post_'+postTranslateIds)) {
           console.log('уже голосовал');
           return;
         } else {
@@ -59,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           
           //Записываем в LocalStorage
           localStorage.setItem('vote_post_'+postId, itemMeta);
+          localStorage.setItem('vote_post_'+postTranslateIds, itemMeta);
 
           // Отправляем запрос
           let data = {
@@ -67,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             'itemMeta': itemMeta,
           };
           // addFavToTable(data);
-          jQuery.ajax({
+          $.ajax({
             url: ajaxurl, // AJAX handler
             data: data,
             type: 'POST',

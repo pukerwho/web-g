@@ -1,3 +1,5 @@
+var $ = require( 'jquery' );
+
 $('.hamburger-toggle').on('click', function(){
   $(this).toggleClass('open');
   $('.mobile-menu').toggleClass('hidden').toggleClass('z-10');

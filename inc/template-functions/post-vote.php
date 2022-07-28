@@ -1,21 +1,36 @@
 <?php 
+
+// Віддаєм кількість голосів
+function get_vote_count($post_id, $current_meta) {
+  $sum_vote = 0;
+  $translation_ids = pll_get_post_translations($post_id);
+  foreach ($translation_ids as $id) {
+    $translate_meta = $current_meta.$id;
+    $get_post_meta = get_post_meta( $id, $translate_meta, true );
+    $current_meta_result = $get_post_meta ? $get_post_meta : '0';
+    $sum_vote = $sum_vote + $current_meta_result;
+  }
+  return $sum_vote;
+}
+
 function post_vote_function() {
   //Получаем данные
   $post_id = stripslashes_deep($_POST['postId']);
   $item_meta = stripslashes_deep($_POST['itemMeta']);
+  $current_meta = $item_meta . $post_id;
   
   //Обновляем мета данные
-  if ( metadata_exists( 'post', $post_id, $item_meta ) ) {
-    $count_value = get_post_meta( $post_id, $item_meta, true );
+  if ( metadata_exists( 'post', $post_id, $current_meta ) ) {
+    $count_value = get_post_meta( $post_id, $current_meta, true );
     $count_value = $count_value + 1;
-    update_post_meta( $post_id, $item_meta, $count_value );
+    update_post_meta( $post_id, $current_meta, $count_value );
   } else {
-    add_post_meta( $post_id, $item_meta, 1, true);
-  }
+    add_post_meta( $post_id, $current_meta, 1, true); 
+  } 
 
-  $data_back = get_post_meta( $post_id, $item_meta, true );
-  
-  echo $data_back;
+  $sum_count = get_vote_count($post_id, $item_meta);
+
+  echo $sum_count;
   wp_die();
 }
 

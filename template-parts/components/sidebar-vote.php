@@ -21,4 +21,14 @@
     <div class="bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center cursor-pointer p-2 mb-2  js-sidebar-item" data-q-css="2">20px</div>
     <div class="bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center cursor-pointer p-2 mb-2  js-sidebar-item" data-q-css="3">30px</div>
   </div>
+
+  <!-- Telegram -->
+  <div class="hidden sidebar-vote-js">
+    <div class="bg-dark-lg dark:bg-dark-xl custom-shadow rounded-lg p-4">
+      <div class="text-gray-200 mb-6"><?php _e('Больше интересных задачек по CSS в нашем', 'weg-g'); ?> <span class="text-indigo-500"><?php _e('Telegram канале', 'web-g'); ?><span> 👇</div>
+      <div class="mb-2 js-analytics" data-analytics-category="Клик" data-analytics-action="Telegram-канал (vote)">
+        <a href="https://t.me/css_golovolomki" class="block bg-indigo-600 text-gray-200 text-center rounded px-6 py-3" target="_blank"><?php _e('Перейти в Telegram', 'web-g'); ?></a>
+      </div>
+    </div>
+  </div>
 </div>

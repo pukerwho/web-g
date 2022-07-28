@@ -2,17 +2,13 @@ module.exports = {
   mode: 'jit',
   content: [
     "./**/*.php",
-    "./source/**/*.js",
+    "./src/**/*.js",
   ],
   safelist: [
     'bg-yellow-100',
     'text-3xl',
     'lg:text-4xl',
   ],
-  // purge: {
-  //   enabled: true,
-  //   content: ["./source/css/tailwind.css", "./**/*.php"],
-  // },
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     zIndex: {
@@ -42,5 +38,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  // plugins: [require('@tailwindcss/typography')],
 }
