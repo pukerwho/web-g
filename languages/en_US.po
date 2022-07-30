@@ -3,209 +3,209 @@
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: uk\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.1\n"
 
 msgid "Вопросы и ответы"
-msgstr "Питання та відповіді"
+msgstr "Questions and answers"
 
 msgid "Популярные вопросы"
-msgstr "Популярні питання"
+msgstr "Popular questions"
 
 msgid "Новые вопросы"
-msgstr "Нові питання"
+msgstr "New questions"
 
 msgid "Привет, меня зовут"
-msgstr "Привіт, мене звати"
+msgstr "Hello my Name Is"
 
 msgid "Все публикации"
-msgstr "Усі публікації"
+msgstr "All publications"
 
 msgid ""
 "Ресурс WEB Головоломки создан для того, чтобы делиться накопленным опытом и "
 "знаниями. Мы надеемся, что наши статьи будут полезны новичкам - тем, которые "
 "только решили вникнуть в мир web-разработки."
 msgstr ""
-"Ресурс WEB Головоломки створений для того, щоб ділитися накопиченим досвідом "
-"та знаннями. Ми сподіваємося, що наші статті будуть корисні новачкам - тим, "
-"які тільки вирішили потрапити у світ web-розробки."
+"The WEB Golovolomki resource was created to share accumulated experience "
+"and knowledge. We hope that our articles will be useful to beginners - those who"
+"just decided to enter the world of web development."
 
 msgid "На сайте вы найдете публикации по разным направлениям и темам"
-msgstr "На сайті ви знайдете публікації з різних напрямків та тем"
+msgstr "On the site you will find publications from various directions and topics"
 
 msgid "Навигация"
-msgstr "Навігація"
+msgstr "Navigation"
 
 msgid "Все про создание и продвижение сайтов"
-msgstr "Все про створення та просування сайтів"
+msgstr "Everything about creating and promoting websites"
 
 msgid ""
 "На данном ресурсе собраны полезные материалы для вебмастеров и seo-"
 "специалистов. WEB Головоломки - это сообщество людей, которые готовы помочь "
 "другим в решении задач по сайтам."
 msgstr ""
-"На цьому ресурсі зібрані корисні матеріали для вебмайстрів та seo-фахівців. "
-"WEB Головоломки - це спільнота людей, які готові допомогти іншим у вирішенні "
-"завдань по сайтам."
+"This resource contains useful materials for webmasters and seo specialists. "
+"WEB Golovolomki is a community of people who are ready to help others in solving "
+"tasks on sites."
 
 msgid "Новое видео на YouTube канале"
-msgstr "Нове відео на YouTube каналі"
+msgstr "New video on YouTube channel"
 
 msgid "Подписаться на канал"
-msgstr "Підписатися на канал"
+msgstr "Subscribe to the channel"
 
 msgid "Новые записи"
-msgstr "Нові записи"
+msgstr "New posts"
 
 msgid ""
 "Публикации, написанные участниками сообщества. Главная цель - поделиться "
 "знаниями в той или иной области."
 msgstr ""
-"Публікації, написані учасниками спільноти. Головна мета – поділитися "
-"знаннями в тій чи іншій галузі."
+"Publications written by community members. The main goal is to share "
+"knowledge in a given area."
 
 msgid "Все записи"
-msgstr "Усі записи"
+msgstr "All posts"
 
 msgid "Помогииите!!!"
-msgstr "Допоможіть!!!"
+msgstr "Heeeeelp!!!"
 
 msgid "Задавай вопрос, получай ответ!"
-msgstr "Задавай питання, отримуй відповідь!"
+msgstr "Ask a question, get an answer!"
 
 msgid "Все вопросы"
-msgstr "Всі питання"
+msgstr "All questions"
 
 msgid "Поиск"
-msgstr "Пошук"
+msgstr "Search"
 
 msgid "Вопрос задан"
-msgstr "Питання задане"
+msgstr "Question asked"
 
 msgid "Ответов"
-msgstr "Відповідей"
+msgstr "Answers"
 
 msgid "Просмотров"
-msgstr "Переглядів"
+msgstr "Views"
 
 msgid "Ответы"
-msgstr "Відповіді"
+msgstr "Answers"
 
 msgid "Главная"
-msgstr "Головна"
+msgstr "Home"
 
 msgid "Обновлено"
-msgstr "Оновлено"
+msgstr "Updated"
 
 msgid "Комментариев"
-msgstr "Коментарів"
+msgstr "Comments"
 
 msgid "Статья была полезной?"
-msgstr "Стаття була корисною?"
+msgstr "Was the article helpful?"
 
 msgid "Да"
-msgstr "Так"
+msgstr "Yes"
 
 msgid "Нет"
-msgstr "Ні"
+msgstr "Not"
 
 msgid "Рекомендуем к прочтению"
-msgstr "Рекомендуємо до прочитання"
+msgstr "Recommended reading"
 
 msgid "Комментарии"
-msgstr "Коментарі"
+msgstr "Comments"
 
 msgid "Заполните форму"
-msgstr "Заповніть форму"
+msgstr "Send the form"
 
 msgid "Заголовок. В чем заключается ваш вопрос."
-msgstr "Заголовок. У чому ваше питання."
+msgstr "Title. What is your question."
 
 msgid "Основная часть. Напишите всю информацию, чтобы получить точный ответ."
 msgstr ""
-"Основна частина. Напишіть всю інформацію, щоб отримати точну відповідь."
+"Main part. Write all the information to get an accurate answer."
 
 msgid "Задать вопрос"
-msgstr "Задати питання"
+msgstr "Ask a question"
 
 msgid "Мы получили ваш вопрос. Сейчас он на проверке у модератора."
-msgstr "Ми отримали ваше запитання. Нині він на перевірці у модератора."
+msgstr "We have received your question. Now he is being checked by a moderator."
 
 msgid "Где учиться"
-msgstr "Де вчитись"
+msgstr "Where to study"
 
 msgid "Рекомендуемые курсы"
-msgstr "Рекомендовані курси"
+msgstr "Recommended courses"
 
 msgid "Проверка знаний"
-msgstr "Перевірка знань"
+msgstr "Check of knowledge"
 
 msgid "Хорошо ли вы знаете CSS?"
-msgstr "Чи добре ви знаєте CSS?"
+msgstr "How well do you know CSS?"
 
 msgid "Подписывайся и не пропускай"
-msgstr "Підписуйся і не пропускай"
+msgstr "Subscribe and don't miss"
 
 msgid "Актуальные новости"
-msgstr "Актуальні новини"
+msgstr "Actual news"
 
 msgid "Интересные задачки"
-msgstr "Цікаві завдання"
+msgstr "Interesting puzzles"
 
 msgid "Полезные подборки"
-msgstr "Корисні добірки"
+msgstr "Useful links"
 
 msgid "Перейти в Telegram"
-msgstr "Перейти до Telegram"
+msgstr "Go to Telegram"
 
 msgid "записей"
-msgstr "записів"
+msgstr "posts"
 
 msgid "Полезно"
-msgstr "Корисно"
+msgstr "Useful"
 
 msgid "Читать дальше"
-msgstr "Читати далі"
+msgstr "Read more"
 
 msgid "Решено"
-msgstr "Вирішено"
+msgstr "Solved"
 
 msgid "Наши авторы"
-msgstr "Наші автори"
+msgstr "Our authors"
 
 msgid "Публикаций"
-msgstr "Публікацій"
+msgstr "Posts"
 
 msgid "Вступай в клуб"
-msgstr "Вступай у клуб"
+msgstr "Join the club"
 
 msgid "Присоединяйся к сообществу!"
-msgstr "Приєднуйся до спільноти!"
+msgstr "Join the community!"
 
 msgid "Перейти на Patreon"
-msgstr "Перейти до Patreon"
+msgstr "Go to Patreon"
 
 msgid "Наш рейтинг"
-msgstr "Наш рейтинг"
+msgstr "Our rating"
 
 msgid "Лучший хостинг для сайта"
-msgstr "Найкращий хостинг для сайту"
+msgstr "The best website hosting"
 
 msgid "Цвет 2022 года"
-msgstr "Колір 2022 року"
+msgstr "Color of 2022"
 
 msgid ""
 "Институт цвета Pantone объявил цвет 2022 года. Это сиреневый оттенок под "
 "названием 17-3938 Very Peri."
 msgstr ""
-"Інститут кольору Pantone оголосив цвіт 2022 року. Це бузковий відтінок під "
-"назвою 17-3938 Very Peri."
+"The Pantone Color Institute has announced the color of the year 2022. It's a shade of lilac "
+"lilac shade called 17-3938 Very Peri."
 
 msgid "Как вас зовут?"
-msgstr "Як вас звати?"
+msgstr "What is your name?"
 
 msgid "Ваш комментарий"
-msgstr "Ваш коментар"
+msgstr "Your comment"
