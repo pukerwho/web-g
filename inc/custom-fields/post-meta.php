@@ -8,6 +8,8 @@ function crb_post_theme_options() {
 	Container::make( 'post_meta', 'More' )
     ->where( 'post_type', '=', 'post' )
     ->add_fields( array(
+      Field::make( 'text', 'crb_post_title', 'Title' ),
+      Field::make( 'textarea', 'crb_post_description', 'Description' ),
       Field::make( 'association', 'crb_similar_links', 'Похожие ссылки')
       ->set_types( array(
         array(

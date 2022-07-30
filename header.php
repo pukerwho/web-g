@@ -1,31 +1,28 @@
 <?php
 
 $current_title = wp_get_document_title();
-if ( is_singular( 'places' ) ) {
+if ( is_singular() ) {
 	//Название заведения
-	$place_title = get_the_title();
-	//Город
-	$current_cities = wp_get_post_terms(  get_the_ID() , 'city', array( 'parent' => 0 ) );
-  foreach (array_slice($current_cities, 0,1) as $city) {
-	  if ($city) {
-	  	$current_city = $city->name;
-	  }	
-  } 
-  //SEO
-  if (get_locale() === 'ru_RU') {
-  	$after_title = 'Отзывы, контакты, телефоны';
-  } else {
-  	$after_title = 'Відгуки, контакти, телефони';
-  }
-	
-	$current_title = $place_title . ' (' . $current_city . ') - ' . $after_title;
+	if (carbon_get_the_post_meta('crb_post_title')) {
+		$single_title = carbon_get_the_post_meta('crb_post_title');
+	} else {
+		$single_title = get_the_title();
+	}
+	if (carbon_get_the_post_meta('crb_post_description')) {
+		$single_description = carbon_get_the_post_meta('crb_post_description');
+	}
+} else {
+	$single_title = wp_get_document_title();
 }
 
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<title><?php echo $current_title; ?></title>
+	<title><?php echo $single_title; ?></title>
+	<?php if ($single_description): ?>
+	<meta name="description" content="<?php echo $single_description; ?>" />
+	<?php endif; ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
