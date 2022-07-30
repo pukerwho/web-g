@@ -21,7 +21,10 @@ p:last-of-type {
   @apply fixed bg-white dark:bg-dark-lg border-b border-gray-400 dark:border-gray-700/50 py-2;
 }
 hr {
-  width: 100%; height: 0.4em; margin: 3em 0; border: 0;
+  width: 100%;
+  height: 0.4em;
+  margin: 3em 0;
+  border: 0;
 }
 .number-iterator {
   @apply w-[20px] h-[20px] text-sm text-white flex justify-center items-center bg-gray-800 rounded-full mr-2;
@@ -46,9 +49,9 @@ hr {
   box-shadow: 0px 0px 40px rgba(29, 58, 83, 15%);
 }
 .scale-mirror {
-  -webkit-transform: scale(-1,1);
-  -ms-transform: scale(-1,1);
-  transform: scale(-1,1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 .content {
   @apply text-lg;
@@ -57,15 +60,15 @@ hr {
   @apply list-disc text-gray-800 dark:text-gray-200 ml-4 mb-8;
 }
 .content ol {
-  @apply list-none text-gray-800 dark:text-gray-200 ml-8 mb-8; 
+  @apply list-none text-gray-800 dark:text-gray-200 mb-8;
 }
 .content ol li {
-  counter-increment: count-me
+  /* counter-increment: count-me */
 }
 .content ol li:before {
   position: relative;
   left: -2rem;
-  content: counter(count-me) ". ";
+  /* content: counter(count-me) ". "; */
   display: block;
   max-width: 0;
   max-height: 0;
@@ -85,6 +88,9 @@ hr {
 }
 .content p {
   @apply text-gray-800 dark:text-gray-300 mb-4;
+}
+.content p:last-of-type {
+  @apply mb-0;
 }
 .content h2 {
   @apply inline-flex text-2xl lg:text-3xl text-gray-800 dark:text-gray-200 bg-blue-100 dark:bg-gray-600 p-2 mb-4;
@@ -114,7 +120,7 @@ hr {
   @apply ml-6;
 }
 .comment.depth-4 {
-  @apply ml-8;  
+  @apply ml-8;
 }
 .comment-content a {
   @apply text-blue-700 dark:text-blue-500;

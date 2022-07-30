@@ -66,7 +66,7 @@ if ( is_singular() ) {
 					</div>
 					<!-- Languages -->
 					<div class="ml-4">
-						<div class="flex items-center -mx-1">
+						<div class="flex items-center text-gray-800 dark:text-gray-200 -mx-1">
 							<?php if (function_exists('pll_the_languages')) {
 								pll_the_languages(); 
 							} ?>

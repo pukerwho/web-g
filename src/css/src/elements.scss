@@ -43,7 +43,7 @@
 .mobile-menu {
   a {
     display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 0.75rem 0;
   }
   li {
@@ -63,7 +63,7 @@
 
 .bullet {
   font-size: 12px;
-  color: #2257DA;
+  color: #2257da;
   list-style-type: disc;
   padding-bottom: 10px;
 }
@@ -72,7 +72,7 @@
   &_item {
     position: relative;
     &:first-of-type {
-      background: url('../../images/home.svg');
+      background: url("../../images/home.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
@@ -82,12 +82,13 @@
       }
     }
     &:after {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       position: absolute;
-      top: 51%; right: -2rem;
-      background: url('../../images/breadcrumbs-arrow.svg');
+      top: 51%;
+      right: -2rem;
+      background: url("../../images/breadcrumbs-arrow.svg");
       background-size: contain;
       background-repeat: no-repeat;
       -webkit-transform: translateY(-50%) translateX(-100%);
@@ -98,7 +99,7 @@
 }
 
 hr {
-  background: url('../../images/hr.svg') center/5em 100% repeat-x;
+  background: url("../../images/hr.svg") center/5em 100% repeat-x;
 }
 
 .header-fixed {
@@ -107,7 +108,8 @@ hr {
 }
 
 .sketch-underline {
-  background: url('../../images/sketch-underline.svg') bottom left/100% 0.75rem no-repeat;
+  background: url("../../images/sketch-underline.svg") bottom left/100% 0.75rem
+    no-repeat;
   padding-bottom: 0.1rem;
 }
 
@@ -126,7 +128,6 @@ hr {
       border-radius: 0.25rem;
     }
   }
-
 }
 
 @-webkit-keyframes fadeInDown {

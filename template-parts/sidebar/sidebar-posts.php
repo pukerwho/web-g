@@ -82,7 +82,9 @@
 </div>
 
 <!-- Курсы -->
+<div class="hidden">
 <?php get_template_part('template-parts/components/sidebar-courses'); ?>
+</div>
 <!-- END Курсы -->
 
 <!-- Популярні дописи -->
@@ -100,7 +102,8 @@
       ) );
       if ($new_posts->have_posts()) : while ($new_posts->have_posts()) : $new_posts->the_post();
     ?>
-      <div class="bg-gray-100 dark:bg-dark-md rounded p-3 mb-2">
+      <div class="relative bg-gray-100 dark:bg-dark-md rounded p-3 mb-2">
+        <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
         <div class="text-gray-800 dark:text-gray-200" >
           <div class="text-light"><?php the_title(); ?></div>
           <div class="text-sm opacity-50">

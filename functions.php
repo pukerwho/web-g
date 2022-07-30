@@ -111,6 +111,7 @@ function crb_load() {
     require_once get_template_directory() . '/inc/custom-fields/page-meta.php';
     require_once get_template_directory() . '/inc/custom-fields/term-meta.php';
     require_once get_template_directory() . '/inc/custom-fields/user-meta.php';
+    require_once get_template_directory() . '/inc/custom-fields/gutenberg-blocks.php';
 }
 
 require_once get_template_directory() . '/inc/share-buttons.php';
@@ -170,6 +171,12 @@ function tailwindwp_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tailwindwp_scripts' );
+
+// Update CSS within in Admin
+function admin_style() {
+  wp_enqueue_style( 'tailwind', get_stylesheet_directory_uri() . '/build/tailwind.css', false, time() );
+}
+add_action('admin_enqueue_scripts', 'admin_style');
 
 //GUTENBERG
 add_action('init', function() {
