@@ -172,11 +172,14 @@ function tailwindwp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'tailwindwp_scripts' );
 
-// Update CSS within in Admin
-function admin_style() {
-  wp_enqueue_style( 'tailwind', get_stylesheet_directory_uri() . '/build/tailwind.css', false, time() );
+function ghub_child_setup() {
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+  
+	// Enqueue editor styles.
+	add_editor_style( get_stylesheet_directory_uri() . '/build/tailwind.css' );
 }
-add_action('admin_enqueue_scripts', 'admin_style');
+add_action( 'after_setup_theme', 'ghub_child_setup' );
 
 //GUTENBERG
 add_action('init', function() {
