@@ -179,7 +179,7 @@ function ghub_child_setup() {
 	// Enqueue editor styles.
 	add_editor_style( get_stylesheet_directory_uri() . '/build/tailwind.css' );
 }
-add_action( 'after_setup_theme', 'ghub_child_setup' );
+// add_action( 'after_setup_theme', 'ghub_child_setup' );
 
 //GUTENBERG
 add_action('init', function() {
