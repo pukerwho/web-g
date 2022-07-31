@@ -20,9 +20,6 @@
                   </a>                        
                   <meta itemprop="position" content="1">
                 </li>
-                <h1   class="tttt">
-ttr
-                </h1>
                 <li itemprop='itemListElement' itemscope itemtype='http://schema.org/ListItem' class="breadcrumbs_item mr-8">
                   <a itemprop="item" href="<?php echo get_page_url('templates/tpl_posts'); ?>" class="text-blue-700 dark:text-blue-400">
                     <span itemprop="name"><?php _e( 'Все записи', 'web-g' ); ?></span>

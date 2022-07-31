@@ -98,7 +98,7 @@ hr {
 .content h3 {
   @apply text-xl lg:text-2xl text-gray-800 dark:text-gray-200 pt-4 mb-4;
 }
-.content img {
+.content img:not(.not-content) {
   @apply w-full bg-white dark:bg-dark-md custom-shadow p-4 my-6;
 }
 .content mark {
