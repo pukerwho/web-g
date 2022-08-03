@@ -55,18 +55,24 @@
             <!-- Meta -->
             <div class="flex flex-col lg:flex-row lg:items-center text-gray-800 dark:text-gray-200 opacity-75 mb-6">
               <div class="mb-2 lg:mb-0 mr-6">
-                <span class="mr-2">🗓️</span> <?php _e('Обновлено', 'web-g'); ?>: <?php echo get_the_date('d.m.Y'); ?>
+                <span class="mr-2">🗓️</span> <?php _e('Обновлено', 'web-g'); ?>: <?php echo get_the_modified_time('d.m.Y'); ?>
               </div>
               <div class="mb-2 lg:mb-0 mr-6">
                 <span class="mr-2">💬</span><?php _e('Комментариев', 'web-g'); ?>: 
                 <?php 
-                  $comment_count = 0;
-                  $translation_post_id = pll_get_post_translations($currentId);
-                  foreach ($translation_post_id as $item) {
-                    $current_count = get_comments_number($item);
-                    $comment_count = $comment_count + $current_count;
+                  $post__in_array = array();
+                  $translation_id = pll_get_post_translations(get_the_ID());
+                  foreach ($translation_id as $tr_id) {
+                    array_push($post__in_array, $tr_id);
                   }
-                  echo $comment_count;
+                  $args = array(
+                    'type' => 'comment',
+                    'post__in' => $post__in_array,
+                    'status' => 'approve'
+                  );
+
+                  $comments = get_comments( $args );
+                  echo count($comments);
                 ?>
               </div>
               <div>
