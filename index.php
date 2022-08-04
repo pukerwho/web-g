@@ -91,8 +91,14 @@
 							$new_posts = new WP_Query( array( 
 								'post_type' => 'post', 
 								'posts_per_page' => 10,
-								'terms'    => array( 52, 50 ),
-								'operator' => 'NOT IN',
+								'tax_query' => array(
+									array(
+										'taxonomy' => 'categories',
+										'field'    => 'term_id',
+										'terms'    => array( 52, 50 ),
+										'operator' => 'NOT IN',
+									)
+								),
 							) );
 							if ($new_posts->have_posts()) : while ($new_posts->have_posts()) : $new_posts->the_post(); 
 						?>
