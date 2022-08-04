@@ -18,7 +18,7 @@ Block::make( 'Treba Important Block' )
 	->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 		?>
 
-    <div class="block mb-12">
+    <div class="block mb-6">
       <?php
       $get_border_style = esc_html( $fields['crb_block_important_style'] );
       switch ($get_border_style) {

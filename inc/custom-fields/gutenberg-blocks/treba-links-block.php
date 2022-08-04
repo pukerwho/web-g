@@ -14,7 +14,7 @@ Block::make( 'Treba Links Block' )
 	->set_render_callback( function ( $fields, $attributes, $inner_blocks ) {
 		?>
 
-    <div class="block mb-12">
+    <div class="block mb-6">
       <div class="bg-gray-100 dark:bg-dark-md rounded-lg relative p-6">
         <div class="absolute top-0 right-0 text-blue-800 lg:translate-x-4 -translate-y-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">

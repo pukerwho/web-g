@@ -83,7 +83,7 @@ hr {
 .content li:last-of-type {
   @apply mb-0;
 }
-.content a {
+.content a:not(.not-content) {
   @apply text-blue-700;
 }
 .content p {
