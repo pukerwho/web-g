@@ -93,7 +93,7 @@
 								'posts_per_page' => 10,
 								'tax_query' => array(
 									array(
-										'taxonomy' => 'categories',
+										'taxonomy' => 'category',
 										'field'    => 'term_id',
 										'terms'    => array( 52, 50 ),
 										'operator' => 'NOT IN',
