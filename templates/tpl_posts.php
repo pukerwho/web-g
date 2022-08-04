@@ -28,6 +28,8 @@ Template Name: Все записи
               'posts_per_page' => 10,
               'order'    => 'DESC',
               'paged' => $current,
+              'terms'    => array( 52, 50 ),
+							'operator' => 'NOT IN',
             ) );
             if ($posts_list->have_posts()) : while ($posts_list->have_posts()) : $posts_list->the_post(); 
           ?>
