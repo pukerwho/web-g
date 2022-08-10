@@ -134,6 +134,9 @@ add_action('do_feed_atom_comments', 'itsme_disable_feed', 1);
 remove_action( 'wp_head', 'feed_links_extra', 3 );
 remove_action( 'wp_head', 'feed_links', 2 );
 
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
+
 /**
  * Register widget area.
  *
