@@ -104,6 +104,9 @@ hr {
 .content mark {
   @apply bg-yellow-100 p-1;
 }
+.wp-block-image figcaption {
+  @apply text-center italic text-sm;
+}
 .lang {
   @apply -mx-2;
 }

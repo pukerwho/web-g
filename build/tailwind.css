@@ -1105,13 +1105,6 @@ video {
           align-items: center;
 }
 
-.justify-end {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
 .justify-center {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -1124,10 +1117,6 @@ video {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.justify-items-end {
-  justify-items: end;
 }
 
 .overflow-hidden {
@@ -1963,6 +1952,13 @@ hr {
   --tw-bg-opacity: 1;
   background-color: rgb(254 249 195 / var(--tw-bg-opacity));
   padding: 0.25rem;
+}
+
+.wp-block-image figcaption {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-style: italic;
 }
 
 .lang {
