@@ -209,3 +209,45 @@ msgstr "What is your name?"
 
 msgid "Ваш комментарий"
 msgstr "Your comment"
+
+msgid "Какое значение установлено по умолчанию для opacity?"
+msgstr "What is the default value for opacity?"
+
+msgid "Какого псевдоэлемента не существует в CSS?"
+msgstr "Which pseudo-element does not exist in CSS?"
+
+msgid "Как правильно объявить переменную в CSS?"
+msgstr "How to properly declare a variable in CSS?"
+
+msgid "Только с помощью препроцессоров"
+msgstr "Only with preprocessors"
+
+msgid "Если у элемента значение position установлено как static, сработает ли для него z-index?"
+msgstr "If an element has its position value set to static, will z-index work for it?"
+
+msgid "С помощью какого тега можно сделать нумерованный список?"
+msgstr "What tag can be used to make a numbered list?"
+
+msgid "Какой псевдокласс сработает при установке курсора в текстовом поле (input)?"
+msgstr "What pseudo-class will work when placing the cursor in a text field (input)?"
+
+msgid "Какой из перечисленных ниже селекторов имеет самый высокий приоритет?"
+msgstr "Which of the following selectors has the highest precedence?"
+
+msgid "Как сделать так, чтобы каждое слово в тексте начиналось с прописной буквы?"
+msgstr "How to make every word in text start with an uppercase letter?"
+
+msgid "Это невозможно в CSS"
+msgstr "It's not possible in CSS"
+
+msgid "Какова ширина HTML-элемента div без содержания? (<div></div>)"
+msgstr "What is the width of an HTML div element with no content? (<div></div>)"
+
+msgid "CSS-свойство background-image может содержать несколько изображений."
+msgstr "The background-image CSS property can contain multiple images."
+
+msgid "Результаты"
+msgstr "Results"
+
+msgid "Правильных ответов"
+msgstr "Correct answers"
