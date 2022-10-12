@@ -162,7 +162,7 @@ Template Name: CSS тест
                 </div>
                 <div class="text-gray-700 dark:text-gray-200">
                   <input type="radio" name="question-7-answers" id="question-7-answers-C" value="C" />
-                  <label for="question-7-answers-C">div#text { color: yellow; }</label>
+                  <label for="question-7-answers-C">div.text { color: yellow; }</label>
                 </div>
                 <div class="text-gray-700 dark:text-gray-200">
                   <input type="radio" name="question-7-answers" id="question-7-answers-D" value="D" />
@@ -184,7 +184,7 @@ Template Name: CSS тест
                 </div>
                 <div class="text-gray-700 dark:text-gray-200">
                   <input type="radio" name="question-8-answers" id="question-8-answers-C" value="C" />
-                  <label for="question-8-answers-C">style: capitalize;</label>
+                  <label for="question-8-answers-C">text-transform: uppercase;</label>
                 </div>
                 <div class="text-gray-700 dark:text-gray-200">
                   <input type="radio" name="question-8-answers" id="question-8-answers-D" value="D" />
@@ -233,7 +233,7 @@ Template Name: CSS тест
               </div>
               <!-- end question-10 -->
 
-              <input type="submit" value="<?php _e("Результати", "web-g"); ?>" class="bg-indigo-600 text-center text-white font-light rounded cursor-pointer px-6 py-2" />
+              <input type="submit" value="<?php _e("Результати", "web-g"); ?>" class="bg-indigo-600 text-center text-white font-light rounded cursor-pointer px-6 py-2 js-analytics" data-analytics-category="Клик" data-analytics-action="Тест по CSS (submit)" />
             </form>
           </div>
         </div>  

@@ -43,8 +43,32 @@ Template Name: CSS тест - Результат
       <div class="w-full lg:w-2/3 lg:px-4">
         <div class="flex flex-wrap flex-col mb-6">
           <div class="content">
+            <!-- 9-10 -->
+            <?php if ($totalCorrect >= 9) {
+              $answer_text = __("Да вы мастер по CSS! Вы должны задавать вопросы, а не отвечать на них. Поздравляем!", "web-g");
+              $answer_emoji = "😎 ";
+            } ?>
+            <!-- 6-8 -->
+            <?php if ($totalCorrect >= 6 && $totalCorrect < 9) {
+              $answer_text = __("Неплохой результат, но вы можете лучше, уверены! Почитайте дополнительную информацию и возвращайтесь.", "web-g");
+              $answer_emoji = "🧑‍💻 ";
+            } ?>
+            <!-- 3-5 -->
+            <?php if ($totalCorrect >= 3 && $totalCorrect < 6) {
+              $answer_text = __("Так себе результат, давай будем откровенны. Читай, верстай и результат улучшится!", "web-g");
+              $answer_emoji = "😐 ";
+            } ?>
+            <!-- 0-2 -->
+            <?php if ($totalCorrect >= 0 && $totalCorrect < 3) {
+              $answer_text = __("Это провал, друг. Попробуй подтянуть знания. На сайте есть много полезного материала. Рекомендую.", "web-g");
+              $answer_emoji = "😪 ";
+            } ?>
             <div class="text-gray-800 dark:text-gray-200 bg-gray-300 dark:bg-dark-md rounded px-6 py-3 mb-6">
-              <?php _e("Правильных ответов", "web-g"); ?>: <?php echo $totalCorrect; ?>/10
+              <div class="text-xl font-bold mb-2"><?php _e("Правильных ответов", "web-g"); ?>: <?php echo $totalCorrect; ?>/10</div>
+              <div class="mb-4"><?php echo $answer_emoji; echo $answer_text; ?></div>
+              <div>
+                <a href="https://t.me/css_golovolomki" target="_blank" class="text-indigo-500 border-b-2 border-indigo-500 not-content"><?php _e("У нас есть Telegram канал - подписывайся!", "web-g"); ?></a>
+              </div>
             </div>
             <!-- Ответы -->
             <div>
