@@ -67,7 +67,7 @@ Template Name: CSS тест - Результат
               <div class="text-xl font-bold mb-2"><?php _e("Правильных ответов", "web-g"); ?>: <?php echo $totalCorrect; ?>/10</div>
               <div class="mb-4"><?php echo $answer_emoji; echo $answer_text; ?></div>
               <div>
-                <a href="https://t.me/css_golovolomki" target="_blank" class="text-indigo-500 border-b-2 border-indigo-500 not-content"><?php _e("У нас есть Telegram канал - подписывайся!", "web-g"); ?></a>
+                <a href="https://t.me/css_golovolomki" target="_blank" class="text-indigo-500 border-b-2 border-indigo-500 not-content js-analytics" data-analytics-category="Клик" data-analytics-action="Telegram (css test)"><?php _e("У нас есть Telegram канал - подписывайся!", "web-g"); ?></a>
               </div>
             </div>
             <!-- Ответы -->
