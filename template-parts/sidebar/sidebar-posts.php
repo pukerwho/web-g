@@ -121,15 +121,15 @@
 <!-- END Опрос -->
 
 <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
-  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Very Peri</div>
-  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🤔</span><?php _e('Цвет 2022 года', 'web-g'); ?></div>
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2">Viva Magenta</div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🤔</span><?php _e('Цвет 2023 года', 'web-g'); ?></div>
   <div class="text-gray-800 dark:text-gray-200">
-    <div class="mb-2"><?php _e('Институт цвета Pantone объявил цвет 2022 года. Это сиреневый оттенок под названием 17-3938 Very Peri.', 'web-g'); ?></div>
+    <div class="mb-2"><?php _e('Исследовательский институт Pantone выбрал главный цвет 2023 года. Им стал карминово-красный оттенок с фиолетовым подтоном, который назвали Viva Magenta.', 'web-g'); ?></div>
   </div>
-  <div class="aspect-square mb-2" style="background-color: #6667ab;"></div>
+  <div class="aspect-square mb-2" style="background-color: #bb2649;"></div>
 
   <div class="flex items-center justify-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded text-center p-2 mb-2" data-q-css="1">
-    <div class="w-4 h-4 mr-2" style="background-color: #6667ab;"></div>
-    <div>#6667ab</div>
+    <div class="w-4 h-4 mr-2" style="background-color: #bb2649;"></div>
+    <div>#bb2649</div>
   </div>
 </div>

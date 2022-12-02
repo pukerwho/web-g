@@ -194,8 +194,8 @@ msgstr "Our rating"
 msgid "Лучший хостинг для сайта"
 msgstr "The best website hosting"
 
-msgid "Цвет 2022 года"
-msgstr "Color of 2022"
+msgid "Цвет 2023 года"
+msgstr "Color of 2023"
 
 msgid ""
 "Институт цвета Pantone объявил цвет 2022 года. Это сиреневый оттенок под "
@@ -251,3 +251,6 @@ msgstr "Results"
 
 msgid "Правильных ответов"
 msgstr "Correct answers"
+
+msgid "Исследовательский институт Pantone выбрал главный цвет 2023 года. Им стал карминово-красный оттенок с фиолетовым подтоном, который назвали Viva Magenta."
+msgstr "The Pantone Research Institute has chosen the color of the year for 2023. They became a carmine-red shade with a purple undertone, which was called Viva Magenta."
