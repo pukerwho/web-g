@@ -104,21 +104,37 @@
                 
               </div>
               <div>
-                <div class="mb-4">
-                 <a href="#" class="font-semibold text-gray-800 dark:text-gray-200"><?php echo get_the_author(); ?></a> 
-                </div>
-                <div class="flex items-center">
-                  <?php if(!empty(get_the_author_meta('facebook'))) { ?>
-                  <div class="mr-3">
-                    <a href="<?php the_author_meta('facebook'); ?>">Facebook</a>
+                <?php if (carbon_get_the_post_meta('crb_post_author')): ?>
+                  <span class="italic"><?php echo carbon_get_the_post_meta('crb_post_author'); ?></span>
+                  <div class="flex items-center text-sm">
+                    <!-- instagram -->
+                    <?php if (carbon_get_the_post_meta('crb_post_author_instagram')): ?>
+                      <div class="italic pr-3"><a href="<?php echo carbon_get_the_post_meta('crb_post_author_instagram'); ?>" class="text-indigo-500">Instagram</a></div>
+                    <?php endif; ?>
+                    <!-- facebook --> 
+                    <?php if (carbon_get_the_post_meta('crb_post_author_facebook')): ?>
+                      <div class="italic"><a href="<?php echo carbon_get_the_post_meta('crb_post_author_facebook'); ?>" class="text-indigo-500">Facebook</a></div>
+                    <?php endif; ?>
                   </div>
-                  <?php } ?>
-                  <?php if(!empty(get_the_author_meta('instagram'))) { ?>
-                  <div>
-                    <a href="<?php the_author_meta('instagram'); ?>">Instagram</a>
+
+                <?php else: ?>
+                  <div class="mb-4">
+                    <a href="#" class="font-semibold text-gray-800 dark:text-gray-200"><?php echo get_the_author(); ?></a> 
                   </div>
-                  <?php } ?>
-                </div>
+                  <div class="flex items-center">
+                    <?php if(!empty(get_the_author_meta('facebook'))) { ?>
+                    <div class="mr-3">
+                      <a href="<?php the_author_meta('facebook'); ?>">Facebook</a>
+                    </div>
+                    <?php } ?>
+                    <?php if(!empty(get_the_author_meta('instagram'))) { ?>
+                    <div>
+                      <a href="<?php the_author_meta('instagram'); ?>">Instagram</a>
+                    </div>
+                    <?php } ?>
+                  </div>
+                <?php endif; ?>
+                
               </div>
             </div>
             <hr>
