@@ -824,6 +824,10 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -834,10 +838,6 @@ video {
 
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .mr-1 {
@@ -1418,10 +1418,6 @@ video {
 
 .pl-8 {
   padding-left: 2rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 
 .pr-3 {

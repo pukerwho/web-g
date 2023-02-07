@@ -157,6 +157,7 @@
               <?php the_content(); ?>
               <!-- ADS --> 
               <?php if (!carbon_get_the_post_meta('crb_post_google_ads')): ?>
+                <div class="mt-4">
                 <!-- Горизонт-сінгл-футер -->
                 <ins class="adsbygoogle"
                 style="display:block"
@@ -166,6 +167,7 @@
                 data-full-width-responsive="true">
                 </ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
               <?php endif; ?>
               <!-- END ADS -->
             </div>
