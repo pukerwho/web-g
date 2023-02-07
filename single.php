@@ -141,6 +141,7 @@
             <!-- END Автор -->
             <!-- ADS --> 
             <?php if (!carbon_get_the_post_meta('crb_post_google_ads')): ?>
+              <div class="mb-4">
               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6649504422654100" crossorigin="anonymous"></script>
               <ins class="adsbygoogle"
               style="display:block; text-align:center;"
@@ -149,10 +150,24 @@
               data-ad-client="ca-pub-6649504422654100"
               data-ad-slot="2469838718"></ins>
               <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+              </div>
             <?php endif; ?>
             <!-- END ADS -->
             <div class="content mb-10">
               <?php the_content(); ?>
+              <!-- ADS --> 
+              <?php if (!carbon_get_the_post_meta('crb_post_google_ads')): ?>
+                <!-- Горизонт-сінгл-футер -->
+                <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-6649504422654100"
+                data-ad-slot="1931895705"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+                </ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+              <?php endif; ?>
+              <!-- END ADS -->
             </div>
           </article>
 
