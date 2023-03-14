@@ -1834,8 +1834,9 @@ hr {
 }
 
 .content ol {
+  margin-left: 1rem;
   margin-bottom: 2rem;
-  list-style-type: none;
+  list-style-type: decimal;
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
