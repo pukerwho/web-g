@@ -91,6 +91,13 @@
 							$new_posts = new WP_Query( array( 
 								'post_type' => 'post', 
 								'posts_per_page' => 10,
+                'meta_query' => array(
+                  array(
+                    'key' => '_crb_post_mainhide',
+                    'value' => 'yes',
+                    'compare' => '!='
+                  ),
+                ),
 								'tax_query' => array(
 									array(
 										'taxonomy' => 'category',
