@@ -257,3 +257,6 @@ msgstr "The Pantone Research Institute has chosen the color of the year for 2023
 
 msgid "Где купить ссылки на сайт?"
 msgstr "Where to buy links to the site?"
+
+msgid "Лучшие биржи ссылок"
+msgstr "Best Link Exchanges"

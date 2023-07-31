@@ -59,10 +59,10 @@
 </div>
 
 <!-- Біржі посилань -->
-<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
-  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Наш рейтинг', 'web-g'); ?></div>
-  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🏆</span><?php _e('Где купить ссылки на сайт?', 'web-g'); ?></div>
-  <div>
+<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg mb-6">
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 py-2 lg:py-4"><?php _e('Наш рейтинг', 'web-g'); ?></div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🏆</span><?php _e('Лучшие биржи ссылок', 'web-g'); ?></div>
+  <div class="px-2 lg:px-4 py-2 lg:py-4">
     <!-- collaborator -->
     <div class="flex items-center justify-between mb-2">
       <div class="flex items-center">
@@ -108,6 +108,9 @@
       <div class="text-gray-800 dark:text-gray-200 opacity-75">3.5</div>
     </div>
     <!-- end Miralinks -->
+  </div>
+  <div>
+    <a href="<?php $birgi_current_lang = pll_current_language(); $birgi_post_id = pll_get_post("1766", $birgi_current_lang); echo get_the_permalink($birgi_post_id); ?>" class="block bg-indigo-600 text-gray-200 text-center rounded px-6 py-3"><?php _e("Где купить ссылки на сайт?", "web-g"); ?></a>
   </div>
 </div>
 <!-- END Біржі посилань -->
