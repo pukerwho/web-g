@@ -110,7 +110,7 @@
     <!-- end Miralinks -->
   </div>
   <div>
-    <a href="<?php $birgi_current_lang = pll_current_language(); $birgi_post_id = pll_get_post("3870"); echo get_the_permalink($birgi_post_id); ?>" class="block bg-indigo-600 text-gray-200 text-center rounded px-6 py-3"><?php _e("Где купить ссылки на сайт?", "web-g"); ?></a>
+    <a href="<?php $birgi_current_lang = pll_current_language(); $birgi_post_id = pll_get_post("3668"); echo get_the_permalink($birgi_post_id); ?>" class="block bg-indigo-600 text-gray-200 text-center rounded px-6 py-3"><?php _e("Где купить ссылки на сайт?", "web-g"); ?></a>
   </div>
 </div>
 <!-- END Біржі посилань -->
