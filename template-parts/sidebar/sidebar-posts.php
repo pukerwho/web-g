@@ -58,6 +58,60 @@
   </div>
 </div>
 
+<!-- Біржі посилань -->
+<div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Наш рейтинг', 'web-g'); ?></div>
+  <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🏆</span><?php _e('Где купить ссылки на сайт?', 'web-g'); ?></div>
+  <div>
+    <!-- collaborator -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4">1</div>
+        <div class="text-gray-800 dark:text-gray-200"><a href="https://collaborator.pro/?ref=Ujyp1z" target="_blank" class="js-analytics" data-analytics-category="Клик" data-analytics-action="Біржі (сайдбар - Collaborator)">Collaborator</a></div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75">4.8</div>
+    </div>
+    <!-- end collaborator -->
+    <!-- Prnews -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4">2</div>
+        <div class="text-gray-800 dark:text-gray-200"><a href="https://prnews.io/ru/sites?i=3718944" target="_blank" class="js-analytics" data-analytics-category="Клик" data-analytics-action="Біржі (сайдбар - Prnews)">Prnews</a></div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75">4.0</div>
+    </div>
+    <!-- end Prnews -->
+    <!-- Whitepress -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4">3</div>
+        <div class="text-gray-800 dark:text-gray-200"><a href="https://www.whitepress.com/6lizz" target="_blank" class="js-analytics" data-analytics-category="Клик" data-analytics-action="Біржі (сайдбар - Whitepress)">Whitepress</a></div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75">3.8</div>
+    </div>
+    <!-- end Whitepress -->
+    <!-- GoGetLinks -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4">4</div>
+        <div class="text-gray-800 dark:text-gray-200">GoGetLinks</div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75">3.5</div>
+    </div>
+    <!-- end GoGetLinks -->
+    <!-- Miralinks -->
+    <div class="flex items-center justify-between mb-2">
+      <div class="flex items-center">
+        <div class="h-8 w-8 flex justify-center items-center bg-gray-300 dark:bg-dark-md dark:text-gray-200 rounded mr-4">5</div>
+        <div class="text-gray-800 dark:text-gray-200">Miralinks</div>
+      </div>
+      <div class="text-gray-800 dark:text-gray-200 opacity-75">3.5</div>
+    </div>
+    <!-- end Miralinks -->
+  </div>
+</div>
+<!-- END Біржі посилань -->
+
 <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
   <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Наш рейтинг', 'web-g'); ?></div>
   <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🏆</span><?php _e('Лучший хостинг для сайта', 'web-g'); ?></div>
