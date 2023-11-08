@@ -50,8 +50,7 @@
                       <a href="<?php echo get_term_link($post_category->term_id, 'category') ?>" class="inline-block text-red-500 mr-2"><?php echo $post_category->name; ?></a> 
                     <?php } ?>
                   </div>
-                  <div class="text-xl lg:text-2xl text-gray-100 mb-4"><?php the_title(); ?></div>
-                  <div class="block italic text-gray-200"><?php echo get_the_modified_time('F, n') ?></div>
+                  <div class="text-xl lg:text-3xl font-bold text-gray-100 mb-4"><?php the_title(); ?></div>
                 </div>
               </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
