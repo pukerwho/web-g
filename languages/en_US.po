@@ -260,3 +260,9 @@ msgstr "Where to buy links to the site?"
 
 msgid "Лучшие биржи ссылок"
 msgstr "Best Link Exchanges"
+
+msgid "Что читают?"
+msgstr "What are they reading?"
+
+msgid "Популярные записи"
+msgstr "Popular posts"
