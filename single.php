@@ -7,7 +7,7 @@
     $countNumber = tutCount($currentId);
   ?>
   <main id="primary" class="bg-white dark:bg-dark-lg">
-    <div class="container pt-24 lg:pt-32" itemscope itemtype="http://schema.org/Article">
+    <div class="container " itemscope itemtype="http://schema.org/Article">
       <div class="flex flex-col lg:flex-row flex-wrap lg:-mx-4">
         <div class="w-full lg:w-8/12 lg:px-4 mb-8">
           <article>
@@ -153,6 +153,12 @@
               </div>
             <?php endif; ?>
             <!-- END ADS -->
+
+            <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>
+            <?php if ($thumb): ?>
+              <img class="w-full h-[300px] min-h-[300px] lg:h-[450px] lg:min-h-[450px] object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $thumb; ?>" loading="lazy">
+            <?php endif; ?>
+
             <div class="content mb-10">
               <?php the_content(); ?>
               <!-- ADS --> 

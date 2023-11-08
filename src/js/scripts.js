@@ -5,15 +5,7 @@ $(".hamburger-toggle").on("click", function () {
   $(".mobile-menu").toggleClass("hidden").toggleClass("z-10");
   $(".modal-bg").toggleClass("hidden").toggleClass("z-2");
   $("body").toggleClass("overflow-hidden");
-});
-
-$(window).scroll(function () {
-  var h_scroll = $(this).scrollTop();
-  if (h_scroll > 70) {
-    $(".header").addClass("header-fixed");
-  } else {
-    $(".header").removeClass("header-fixed");
-  }
+  $("header").toggleClass("relative z-10");
 });
 
 if (

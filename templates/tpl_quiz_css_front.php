@@ -9,7 +9,7 @@ Template Name: CSS тест
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <main id="primary" class="bg-white dark:bg-dark-lg">
-  <div class="container pt-24 lg:pt-32">
+  <div class="container">
     <h1 class="text-4xl font-black text-gray-800 dark:text-gray-200 text-center mb-12">
       <span class="sketch-underline"><?php the_title(); ?></span>
     </h1>

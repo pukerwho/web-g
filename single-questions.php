@@ -3,7 +3,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php $countNumber = tutCount(get_the_ID()); ?>
   <main id="primary" class="bg-white dark:bg-dark-lg">
-    <div class="container pt-24 lg:pt-32">
+    <div class="container">
       <!-- Все вопросы -->
       <div class="relative mb-6">
         <a href="<?php echo get_post_type_archive_link('questions'); ?>" class="absolute-link"></a>

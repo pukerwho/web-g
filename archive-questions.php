@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="primary" class="relative bg-white dark:bg-dark-lg pt-24 lg:pt-32">
+<main id="primary" class="relative bg-white dark:bg-dark-lg">
   <!-- Декоративная линия -->
   <div class="hidden lg:block absolute bottom-0 left-0 z-0">
     <svg width="822.2px" height="301.9px" viewBox="0 0 822.2 301.9">

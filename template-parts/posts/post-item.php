@@ -18,15 +18,29 @@
         <?php _e('Полезно', 'web-g'); ?> - <span class="w-6 h-6 inline-flex justify-center items-center bg-green-500 text-white rounded"><?php echo get_vote_count($currentId, 'meta_up_'); ?></span></div>
     </div>
   </div>
-  <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4 lg:mb-6">
-    <a href=<?php the_permalink(); ?>><?php the_title(); ?></a>
+  <div class="flex flex-wrap border-b border-gray-300 dark:border-gray-600 pb-3 lg:pb-6 mb-3 lg:mb-6">
+    <?php $medium_thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>
+    <?php if ($medium_thumb): ?>
+      <div class="w-full lg:w-1/4 pr-0 lg:pr-4 mb-4 lg:mb-0">
+        <img class="w-full h-[125px] min-h-[125px] object-cover rounded" alt="<?php the_title(); ?>" src="<?php echo $medium_thumb; ?>" loading="lazy">
+      </div>
+    <?php endif; ?>
+
+    <div class="<?php echo ($medium_thumb) ? "w-full lg:w-3/4" : "w-full"; ?>">
+      <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4 lg:mb-6">
+        <a href=<?php the_permalink(); ?>><?php the_title(); ?></a>
+      </div>
+      <div class="text-sm text-gray-800 dark:text-gray-200">
+        <?php 
+          $content_text = wp_strip_all_tags( get_the_content() );
+          echo mb_strimwidth($content_text, 0, 200, '...');
+          unset($content_text);
+        ?>
+      </div>
+    </div>
+    
   </div>
-  <div class="text-sm text-gray-800 dark:text-gray-200 border-b border-gray-300 dark:border-gray-600 pb-3 lg:pb-6 mb-3 lg:mb-6">
-    <?php 
-      $content_text = wp_strip_all_tags( get_the_content() );
-      echo mb_strimwidth($content_text, 0, 200, '...');
-    ?>
-  </div>
+  
   <div class="flex lg:justify-between lg:items-center flex-col lg:flex-row">
     <div class="flex items-center mb-3 lg:mb-0">
       <div class="mr-4">
@@ -52,7 +66,7 @@
       </div>
       <div>
         <?php if (carbon_get_the_post_meta('crb_post_author')): ?>
-          <span class="italic"><?php echo carbon_get_the_post_meta('crb_post_author'); ?></span>
+          <span class="italic text-gray-800 dark:text-gray-200"><?php echo carbon_get_the_post_meta('crb_post_author'); ?></span>
         <?php else: ?>
           <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>" class="font-light text-gray-800 dark:text-gray-200"><?php echo get_the_author(); ?></a>
         <?php endif; ?>
