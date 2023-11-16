@@ -27,7 +27,7 @@
     <?php endif; ?>
 
     <div class="<?php echo ($medium_thumb) ? "w-full lg:w-3/4" : "w-full"; ?>">
-      <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-4 lg:mb-6">
+      <div class="text-lg lg:text-2xl text-gray-800 dark:text-gray-200 font-bold mb-2">
         <a href=<?php the_permalink(); ?>><?php the_title(); ?></a>
       </div>
       <div class="text-sm text-gray-800 dark:text-gray-200">
