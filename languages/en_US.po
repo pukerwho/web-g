@@ -194,15 +194,8 @@ msgstr "Our rating"
 msgid "Лучший хостинг для сайта"
 msgstr "The best website hosting"
 
-msgid "Цвет 2023 года"
-msgstr "Color of 2023"
-
-msgid ""
-"Институт цвета Pantone объявил цвет 2022 года. Это сиреневый оттенок под "
-"названием 17-3938 Very Peri."
-msgstr ""
-"The Pantone Color Institute has announced the color of the year 2022. It's a shade of lilac "
-"lilac shade called 17-3938 Very Peri."
+msgid "Цвет 2024 года"
+msgstr "Color of 2024"
 
 msgid "Как вас зовут?"
 msgstr "What is your name?"
@@ -252,8 +245,8 @@ msgstr "Results"
 msgid "Правильных ответов"
 msgstr "Correct answers"
 
-msgid "Исследовательский институт Pantone выбрал главный цвет 2023 года. Им стал карминово-красный оттенок с фиолетовым подтоном, который назвали Viva Magenta."
-msgstr "The Pantone Research Institute has chosen the color of the year for 2023. They became a carmine-red shade with a purple undertone, which was called Viva Magenta."
+msgid "Исследовательский институт Pantone выбрал главный цвет 2024 года. Им стал нежный бархатистый персиковый оттенок, получивший название Peach Fuzz (Персиковый пух)."
+msgstr "The Pantone Research Institute has chosen the main color of 2024. It became a delicate velvety peach shade, called Peach Fuzz."
 
 msgid "Где купить ссылки на сайт?"
 msgstr "Where to buy links to the site?"
