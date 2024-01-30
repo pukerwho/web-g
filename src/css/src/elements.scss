@@ -41,24 +41,27 @@
 }
 
 .mobile-menu {
-  a {
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0.75rem 0;
-  }
-  li {
-    &:first-of-type {
-      a {
-        padding-top: 0;
+  .menu {
+    a {
+      display: block;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 0.75rem 0;
+    }
+    li {
+      &:first-of-type {
+        a {
+          padding-top: 0;
+        }
+      }
+      &:last-of-type {
+        a {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
       }
     }
-    &:last-of-type {
-      a {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-    }
   }
+  
 }
 
 .bullet {

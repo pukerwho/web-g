@@ -86,13 +86,20 @@ if ( is_singular() ) {
     </div>
   </header>
 
-	<div class="mobile-menu hidden h-full w-full fixed left-0 top-16 py-4 px-2">
-		<div class="custom-shadow bg-white rounded-lg p-4">
+	<div class="mobile-menu hidden h-full w-full fixed left-0 top-[76px]">
+		<div class="bg-white p-4">
 			<?php wp_nav_menu([
 	      'theme_location' => 'mobile',
 	      'container' => 'div',
-	      'menu_class' => 'flex flex-col'
+	      'menu_class' => 'menu flex flex-col'
 	    ]); ?> 
 		</div>
+    <div class="bg-dark-md p-4">
+      <div class="flex items-center text-gray-200 -mx-2">
+        <?php if (function_exists('pll_the_languages')) {
+          pll_the_languages(); 
+        } ?>
+      </div>
+    </div>
 	</div>
 
