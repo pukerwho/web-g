@@ -1,25 +1,10 @@
 <?php
-/**
- * G-Info functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package G-Info
- */
 
 if ( ! defined( 'TAILWINDWP_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
 	define( 'TAILWINDWP_VERSION', '1.0.0' );
 }
 
 if ( ! function_exists( 'tailwind_wp_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * Note that this function is hooked into the after_setup_theme hook, which
-	 * runs before the init hook. The init hook is too late for some features, such
-	 * as indicating support for post thumbnails.
-	 */
 	function tailwind_wp_setup() {
 		load_theme_textdomain( 'web-g', get_template_directory() . '/languages' );
 
@@ -35,10 +20,6 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 			)
 		);
 
-		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
 		add_theme_support(
 			'html5',
 			array(
@@ -52,7 +33,6 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 			)
 		);
 
-		// Set up the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background',
 			apply_filters(
@@ -67,11 +47,6 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
 		add_theme_support(
 			'custom-logo',
 			array(
@@ -85,13 +60,6 @@ if ( ! function_exists( 'tailwind_wp_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'tailwind_wp_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
 function tarakan_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'tarakan_content_width', 640 );
 }
@@ -136,12 +104,11 @@ remove_action( 'wp_head', 'feed_links', 2 );
 
 add_filter( 'xmlrpc_enabled', '__return_false' );
 
+add_action( 'wp_enqueue_scripts', 'remove_global_styles' );
+function remove_global_styles(){
+  wp_dequeue_style( 'global-styles' );
+}
 
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
 function tarakan_widgets_init() {
 	register_sidebar(
 		array(
