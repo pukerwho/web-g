@@ -149,7 +149,7 @@
 <!-- END Опрос -->
 
 <div class="bg-white dark:bg-dark-xl custom-shadow rounded-lg px-2 lg:px-4 py-2 lg:py-4 lg:pb-2 mb-6">
-  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Полезно', 'web-g'); ?></div>
+  <div class="text-center text-lg text-indigo-600 dark:text-indigo-400 mb-2"><?php _e('Наш выбор', 'web-g'); ?></div>
   <div class="text-xl text-gray-800 dark:text-gray-200 text-center mb-4"><span class="mr-2">🧑‍🎓</span><?php _e('Рекомендуем к прочтению', 'web-g'); ?></div>
   <div>
     <?php 
@@ -177,7 +177,13 @@
     <div class="w-full relative cursor-pointer mb-2">
       <a href="<?php the_permalink(); ?>" class="absolute-link"></a>
       <div class="flex items-center justify-between text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-dark-md rounded px-4 py-3">
-        <div class="w-1/3"><img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="object-cover aspect-video"></div>
+        <div class="w-1/3">
+          <?php if (get_the_post_thumbnail_url()): ?>
+            <img  src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium'); ?>" alt="<?php the_title(); ?>" class="object-cover aspect-video">
+          <?php else: ?>
+            <img  src="<?php echo get_stylesheet_directory_uri(); ?>/images/no-image.jpg" alt="<?php the_title(); ?>" class="object-cover aspect-video">
+          <?php endif; ?>
+        </div>
         <div class="w-2/3"><div class="text-sm ml-4"><?php the_title(); ?></div></div>
       </div>
     </div>
