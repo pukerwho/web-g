@@ -259,3 +259,6 @@ msgstr "What are they reading?"
 
 msgid "Популярные записи"
 msgstr "Popular posts"
+
+msgid "Наш выбор"
+msgstr "Our choice"
