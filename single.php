@@ -156,7 +156,7 @@
 
             <?php $thumb = get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>
             <?php if ($thumb): ?>
-              <img class="w-full h-[300px] min-h-[300px] lg:h-[450px] lg:min-h-[450px] object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $thumb; ?>" loading="lazy">
+              <img class="w-full h-full object-cover rounded-lg mb-6" alt="<?php the_title(); ?>" src="<?php echo $thumb; ?>" loading="lazy">
             <?php endif; ?>
 
             <div class="content mb-10">
